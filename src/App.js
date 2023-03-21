@@ -4,24 +4,24 @@ import KRSBI from './components/KRSBI/KRSBI';
 import KRSTI from './components/KRSTI/KRSTI';
 import KRSRI from './components/KRSRI/KRSRI';
 import KRTMI from './components/KRTMI/KRTMI';
-import {BrowserRouter, Route, Routes} from "react-router-dom"
+import {HashRouter, Route, Routes} from "react-router-dom"
 import KRTI from './components/KRTI/KRTI';
 
 
 function App() {
   return (
     <div>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
-          <Route exact path='/' element={<HomePage/>}/>
-          <Route exact path='KRAI' element={<KRAI/>}/>
-          <Route exact path='KRSBI' element={<KRSBI/>}/>
-          <Route exact path='KRSTI' element={<KRSTI/>}/>
-          <Route exact path='KRSRI' element={<KRSRI/>}/>
-          <Route exact path='KRTMI' element={<KRTMI/>}/>
-          <Route exact path='KRTI' element={<KRTI/>}/>
+          <Route exact path='/' Component={HomePage}/>
+          <Route exact path='KRAI' Component={KRAI}/>
+          <Route exact path='KRSBI' Component={KRSBI}/>
+          <Route exact path='KRSTI' Component={KRSTI}/>
+          <Route exact path='KRSRI' Component={KRSRI}/>
+          <Route exact path='KRTMI' Component={KRTMI}/>
+          <Route exact path='KRTI' Component={KRTI}/>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
