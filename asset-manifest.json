@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.c3460629.css",
-    "main.js": "/static/js/main.78bb4f3e.js",
-    "static/media/bendum-II.png": "/static/media/bendum-II.dbcf4bcb86307459224d.png",
-    "static/media/ketum.png": "/static/media/ketum.e17efa34de439897159d.png",
-    "static/media/wkm.png": "/static/media/wkm.7d3809351b0abf23b491.png",
-    "static/media/sekum-II.png": "/static/media/sekum-II.172916545b5d005b439b.png",
-    "static/media/sekre-I.png": "/static/media/sekre-I.88b52dcab04ba123af7b.png",
-    "static/media/001.jpg": "/static/media/001.412f33b093b9ed62b353.jpg",
-    "static/media/002.JPG": "/static/media/002.13e7017400d2c088487c.JPG",
-    "static/media/krsbi.png": "/static/media/krsbi.bc1dc71c286d9e368a59.png",
-    "static/media/krsti.png": "/static/media/krsti.8846b4633d0405aaf397.png",
-    "static/media/robotik.png": "/static/media/robotik.beb288a0771b3827bf67.png",
-    "static/media/krtmi.png": "/static/media/krtmi.91d1ca5286007f19dcdc.png",
-    "static/media/krai.png": "/static/media/krai.c10e5bed0eb8039fb5a2.png",
-    "static/media/krsri.png": "/static/media/krsri.527869b25fb131ced354.png",
-    "static/media/krti.png": "/static/media/krti.e3904c7bedc5631444be.png",
-    "static/media/bendumI.png": "/static/media/bendumI.8461bda71ef1577c9443.png",
-    "index.html": "/index.html",
-    "main.c3460629.css.map": "/static/css/main.c3460629.css.map",
-    "main.78bb4f3e.js.map": "/static/js/main.78bb4f3e.js.map"
+    "main.css": "/web-robotik-unp/static/css/main.c3460629.css",
+    "main.js": "/web-robotik-unp/static/js/main.b9dccabf.js",
+    "static/media/bendum-II.png": "/web-robotik-unp/static/media/bendum-II.dbcf4bcb86307459224d.png",
+    "static/media/ketum.png": "/web-robotik-unp/static/media/ketum.e17efa34de439897159d.png",
+    "static/media/wkm.png": "/web-robotik-unp/static/media/wkm.7d3809351b0abf23b491.png",
+    "static/media/sekum-II.png": "/web-robotik-unp/static/media/sekum-II.172916545b5d005b439b.png",
+    "static/media/sekre-I.png": "/web-robotik-unp/static/media/sekre-I.88b52dcab04ba123af7b.png",
+    "static/media/001.jpg": "/web-robotik-unp/static/media/001.412f33b093b9ed62b353.jpg",
+    "static/media/002.JPG": "/web-robotik-unp/static/media/002.13e7017400d2c088487c.JPG",
+    "static/media/krsbi.png": "/web-robotik-unp/static/media/krsbi.bc1dc71c286d9e368a59.png",
+    "static/media/krsti.png": "/web-robotik-unp/static/media/krsti.8846b4633d0405aaf397.png",
+    "static/media/robotik.png": "/web-robotik-unp/static/media/robotik.beb288a0771b3827bf67.png",
+    "static/media/krtmi.png": "/web-robotik-unp/static/media/krtmi.91d1ca5286007f19dcdc.png",
+    "static/media/krai.png": "/web-robotik-unp/static/media/krai.c10e5bed0eb8039fb5a2.png",
+    "static/media/krsri.png": "/web-robotik-unp/static/media/krsri.527869b25fb131ced354.png",
+    "static/media/krti.png": "/web-robotik-unp/static/media/krti.e3904c7bedc5631444be.png",
+    "static/media/bendumI.png": "/web-robotik-unp/static/media/bendumI.8461bda71ef1577c9443.png",
+    "index.html": "/web-robotik-unp/index.html",
+    "main.c3460629.css.map": "/web-robotik-unp/static/css/main.c3460629.css.map",
+    "main.b9dccabf.js.map": "/web-robotik-unp/static/js/main.b9dccabf.js.map"
   },
   "entrypoints": [
     "static/css/main.c3460629.css",
-    "static/js/main.78bb4f3e.js"
+    "static/js/main.b9dccabf.js"
   ]
 }
