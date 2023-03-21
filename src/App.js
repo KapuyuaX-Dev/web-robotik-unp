@@ -14,12 +14,12 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route exact path='/' element={<HomePage/>}/>
-          <Route exact path='/KRAI' element={<KRAI/>}/>
-          <Route exact path='/KRSBI' element={<KRSBI/>}/>
-          <Route exact path='/KRSTI' element={<KRSTI/>}/>
-          <Route exact path='/KRSRI' element={<KRSRI/>}/>
-          <Route exact path='/KRTMI' element={<KRTMI/>}/>
-          <Route exact path='/KRTI' element={<KRTI/>}/>
+          <Route exact path='KRAI' element={<KRAI/>}/>
+          <Route exact path='KRSBI' element={<KRSBI/>}/>
+          <Route exact path='KRSTI' element={<KRSTI/>}/>
+          <Route exact path='KRSRI' element={<KRSRI/>}/>
+          <Route exact path='KRTMI' element={<KRTMI/>}/>
+          <Route exact path='KRTI' element={<KRTI/>}/>
         </Routes>
       </BrowserRouter>
     </div>
