@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c3460629.css",
-    "main.js": "/static/js/main.8f067acb.js",
+    "main.js": "/static/js/main.3c95a2f8.js",
     "static/media/bendum-II.png": "/static/media/bendum-II.dbcf4bcb86307459224d.png",
     "static/media/ketum.png": "/static/media/ketum.e17efa34de439897159d.png",
     "static/media/wkm.png": "/static/media/wkm.7d3809351b0abf23b491.png",
@@ -19,10 +19,10 @@
     "static/media/bendumI.png": "/static/media/bendumI.8461bda71ef1577c9443.png",
     "index.html": "/index.html",
     "main.c3460629.css.map": "/static/css/main.c3460629.css.map",
-    "main.8f067acb.js.map": "/static/js/main.8f067acb.js.map"
+    "main.3c95a2f8.js.map": "/static/js/main.3c95a2f8.js.map"
   },
   "entrypoints": [
     "static/css/main.c3460629.css",
-    "static/js/main.8f067acb.js"
+    "static/js/main.3c95a2f8.js"
   ]
 }
