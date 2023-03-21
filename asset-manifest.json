@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/KapuyuaX-Dev.github.io/web-robotik-unp/static/css/main.c3460629.css",
-    "main.js": "/KapuyuaX-Dev.github.io/web-robotik-unp/static/js/main.268ef7f8.js",
-    "static/media/bendum-II.png": "/KapuyuaX-Dev.github.io/web-robotik-unp/static/media/bendum-II.dbcf4bcb86307459224d.png",
-    "static/media/ketum.png": "/KapuyuaX-Dev.github.io/web-robotik-unp/static/media/ketum.e17efa34de439897159d.png",
-    "static/media/wkm.png": "/KapuyuaX-Dev.github.io/web-robotik-unp/static/media/wkm.7d3809351b0abf23b491.png",
-    "static/media/sekum-II.png": "/KapuyuaX-Dev.github.io/web-robotik-unp/static/media/sekum-II.172916545b5d005b439b.png",
-    "static/media/sekre-I.png": "/KapuyuaX-Dev.github.io/web-robotik-unp/static/media/sekre-I.88b52dcab04ba123af7b.png",
-    "static/media/001.jpg": "/KapuyuaX-Dev.github.io/web-robotik-unp/static/media/001.412f33b093b9ed62b353.jpg",
-    "static/media/002.JPG": "/KapuyuaX-Dev.github.io/web-robotik-unp/static/media/002.13e7017400d2c088487c.JPG",
-    "static/media/krsbi.png": "/KapuyuaX-Dev.github.io/web-robotik-unp/static/media/krsbi.bc1dc71c286d9e368a59.png",
-    "static/media/krsti.png": "/KapuyuaX-Dev.github.io/web-robotik-unp/static/media/krsti.8846b4633d0405aaf397.png",
-    "static/media/robotik.png": "/KapuyuaX-Dev.github.io/web-robotik-unp/static/media/robotik.beb288a0771b3827bf67.png",
-    "static/media/krtmi.png": "/KapuyuaX-Dev.github.io/web-robotik-unp/static/media/krtmi.91d1ca5286007f19dcdc.png",
-    "static/media/krai.png": "/KapuyuaX-Dev.github.io/web-robotik-unp/static/media/krai.c10e5bed0eb8039fb5a2.png",
-    "static/media/krsri.png": "/KapuyuaX-Dev.github.io/web-robotik-unp/static/media/krsri.527869b25fb131ced354.png",
-    "static/media/krti.png": "/KapuyuaX-Dev.github.io/web-robotik-unp/static/media/krti.e3904c7bedc5631444be.png",
-    "static/media/bendumI.png": "/KapuyuaX-Dev.github.io/web-robotik-unp/static/media/bendumI.8461bda71ef1577c9443.png",
-    "index.html": "/KapuyuaX-Dev.github.io/web-robotik-unp/index.html",
-    "main.c3460629.css.map": "/KapuyuaX-Dev.github.io/web-robotik-unp/static/css/main.c3460629.css.map",
-    "main.268ef7f8.js.map": "/KapuyuaX-Dev.github.io/web-robotik-unp/static/js/main.268ef7f8.js.map"
+    "main.css": "/web-robotik-unp/static/css/main.c3460629.css",
+    "main.js": "/web-robotik-unp/static/js/main.4719cb03.js",
+    "static/media/bendum-II.png": "/web-robotik-unp/static/media/bendum-II.dbcf4bcb86307459224d.png",
+    "static/media/ketum.png": "/web-robotik-unp/static/media/ketum.e17efa34de439897159d.png",
+    "static/media/wkm.png": "/web-robotik-unp/static/media/wkm.7d3809351b0abf23b491.png",
+    "static/media/sekum-II.png": "/web-robotik-unp/static/media/sekum-II.172916545b5d005b439b.png",
+    "static/media/sekre-I.png": "/web-robotik-unp/static/media/sekre-I.88b52dcab04ba123af7b.png",
+    "static/media/001.jpg": "/web-robotik-unp/static/media/001.412f33b093b9ed62b353.jpg",
+    "static/media/002.JPG": "/web-robotik-unp/static/media/002.13e7017400d2c088487c.JPG",
+    "static/media/krsbi.png": "/web-robotik-unp/static/media/krsbi.bc1dc71c286d9e368a59.png",
+    "static/media/krsti.png": "/web-robotik-unp/static/media/krsti.8846b4633d0405aaf397.png",
+    "static/media/robotik.png": "/web-robotik-unp/static/media/robotik.beb288a0771b3827bf67.png",
+    "static/media/krtmi.png": "/web-robotik-unp/static/media/krtmi.91d1ca5286007f19dcdc.png",
+    "static/media/krai.png": "/web-robotik-unp/static/media/krai.c10e5bed0eb8039fb5a2.png",
+    "static/media/krsri.png": "/web-robotik-unp/static/media/krsri.527869b25fb131ced354.png",
+    "static/media/krti.png": "/web-robotik-unp/static/media/krti.e3904c7bedc5631444be.png",
+    "static/media/bendumI.png": "/web-robotik-unp/static/media/bendumI.8461bda71ef1577c9443.png",
+    "index.html": "/web-robotik-unp/index.html",
+    "main.c3460629.css.map": "/web-robotik-unp/static/css/main.c3460629.css.map",
+    "main.4719cb03.js.map": "/web-robotik-unp/static/js/main.4719cb03.js.map"
   },
   "entrypoints": [
     "static/css/main.c3460629.css",
-    "static/js/main.268ef7f8.js"
+    "static/js/main.4719cb03.js"
   ]
 }
