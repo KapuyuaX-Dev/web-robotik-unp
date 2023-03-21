@@ -14,7 +14,7 @@ const Home = () =>{
             <Row>
                 <Col>
                     <p>
-                        Unit Kegiatan Robotika Universitas Negeri Padang (UKRO UNP) atau lebih dikenal dengan <b>ROBOTIK UNP</b> merupakan sebuah unit yang mewadahi potensi mahasiswa UNP khususnya pada bidang Robotika. UKRO sendiri berdiri pada tanggal 10 September 2008 dengan nama <b><i>Gaza Robotik Team</i></b>. Nama <i>Gaza</i> diambil dari semangat juang Gaza yang pantang menyerah dan tidak mudah putus asa. <i>Gaza Robotik Team</i> ini masih berada di bawah naungan Fakultas Teknik UNP yang pada akhirnyaa di tahun 2019 menjadi salah satu UKM yang ada di tingkat Universitas. Pada saat ini nama Gaza Robotik Team berubah menjadi Unit Kegiatan Robotika Universitas Negeri Padang.
+                        Unit Kegiatan Robotika Universitas Negeri Padang (UKRO UNP) atau lebih dikenal dengan <b>ROBOTIK UNP</b> merupakan sebuah unit yang mewadahi potensi mahasiswa UNP khususnya pada bidang rekayasa teknologi robotika. UKRO sendiri berdiri pada tanggal 10 September 2008 dengan nama <b><i>Gaza Robotik Team</i></b>. Nama <i>Gaza</i> diambil dari semangat juang Gaza yang pantang menyerah dan tidak mudah putus asa. <i>Gaza Robotik Team</i> ini masih berada di bawah naungan Fakultas Teknik UNP yang pada akhirnyaa di tahun 2019 menjadi salah satu UKM yang ada di tingkat Universitas. Pada saat ini nama Gaza Robotik Team berubah menjadi Unit Kegiatan Robotika Universitas Negeri Padang.
                     </p>
                 </Col>
                 <Col>
