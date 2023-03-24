@@ -19,7 +19,7 @@ const Home = () =>{
                 </Col>
                 <Col>
                     <div className="ratio ratio-16x9 videoProfil">
-                        <iframe width="280" height="auto" src="https://www.youtube.com/embed/AeYDPMnbTHQ?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" ></iframe>
+                        <iframe loading="lazy" width="280" height="auto" src="https://www.youtube.com/embed/AeYDPMnbTHQ?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" ></iframe>
                     </div>
                 </Col>
             </Row>
@@ -69,7 +69,7 @@ const Home = () =>{
                 <Row>
                     <div className="text-center">
                         <h4>PRESIDENT</h4>
-                        <img src={ketuaUmum} alt='ketum'></img>
+                        <img src={ketuaUmum} alt='ketum' loading="lazy"></img>
                         <h5>Willy Hardi Vernando</h5>
                     </div>
                 </Row>
@@ -85,14 +85,14 @@ const Home = () =>{
                     <Col xs lg="4"> 
                         <div className="text-center">
                             <h4>VICE PRESIDENT of MANAGEMENT</h4>
-                            <img src={wkm} alt='wkm'></img>
+                            <img src={wkm} alt='wkm' loading="lazy"></img>
                             <h5>Dadang Suriana Fahreza</h5>
                         </div>
                     </Col>
                     <Col xs lg="4">
                         <div className="text-center">
                             <h4>TREASURER I</h4>
-                            <img src={bendumI} alt='bendumI'></img>
+                            <img src={bendumI} alt='bendumI' loading="lazy"></img>
                             <h5>Kurnia Innalillahi</h5>
                         </div>
                     </Col>
@@ -101,21 +101,21 @@ const Home = () =>{
                     <Col xs lg="4">
                         <div className="text-center">
                             <h4>TREASURER II</h4>
-                            <img src={bendumII} alt='bendumII'></img>
+                            <img src={bendumII} alt='bendumII' loading="lazy"></img>
                             <h5>Auliya Einsrizkianne Edray</h5>
                         </div>
                     </Col>
                     <Col xs lg="4">
                         <div className="text-center">
                             <h4>SECRETARY I</h4>
-                            <img src={sekretarisI} alt='sekretarisI'></img>
+                            <img src={sekretarisI} alt='sekretarisI' loading="lazy"></img>
                             <h5>Gusvito Habiby</h5>
                         </div>
                     </Col>
                     <Col xs lg="4">
                         <div className="text-center">
                             <h4>SECRETARY II</h4>
-                            <img src={sekretarisII} alt='sekretarisII'></img>
+                            <img src={sekretarisII} alt='sekretarisII' loading="lazy"></img>
                             <h5>Delila Agustina Tinambunan</h5>
                         </div>
                     </Col>

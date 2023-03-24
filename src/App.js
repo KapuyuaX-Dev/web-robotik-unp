@@ -10,7 +10,7 @@ import KRTI from './components/KRTI/KRTI';
 
 function App() {
   return (
-      <BrowserRouter>
+      <BrowserRouter basename='/'>
         <Routes>
           <Route exact path='/' element={<HomePage/>}/>
           <Route exact path='/KRAI' element={<KRAI/>}/>
