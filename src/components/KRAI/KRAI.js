@@ -1,9 +1,11 @@
 import React from 'react'
-
+import Construction from '../Construction';
 function KRAI() {
   document.title = "KRAI UNP";
   return (
-    <div>KRAI</div>
+    <div>
+      <Construction/>
+    </div>
   )
 }
 

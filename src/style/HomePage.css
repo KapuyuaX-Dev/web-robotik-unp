@@ -107,6 +107,29 @@
     opacity: 80%;
 }
 
+.achievement-card{
+    margin: 30px auto 50px auto;
+    width: 250px;
+    height: 300px;
+    background: #0e0a26;
+    border-radius: 15px;
+}
+
+.achievement-card .card-title{
+    width: 150px;
+    height: 40px;
+    margin: 10px 50px auto auto;
+    padding-top: 8px;
+    color: whitesmoke;
+    border-radius: 8px;
+}
+
+.achievement-card .description{
+    margin: 20px 15px 15px auto;
+    text-align: justify;
+    color: whitesmoke;
+}
+
 .gallery-image Figure:hover{
     transform: scale(1.2);
 }
