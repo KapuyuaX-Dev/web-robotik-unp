@@ -1,11 +1,11 @@
 import React from 'react'
-import Header from './Header';
-import Footer from './Footer';
-import Home from './Home';
-import Teams from './Teams';
-import Galery from './Galery';
-import Sponsors from './Sponsors';
-import Achievement from './Achievement';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import Home from '../components/Home';
+import Teams from '../components/Teams';
+import Galery from '../components/Galery';
+import Sponsors from '../components/Sponsors';
+import Achievement from '../components/Achievement';
 import '../style/HomePage.css'
 
 function HomePage() {

@@ -9,7 +9,7 @@ const NavigationBar = () => {
                 <Container>
                     <Navbar collapseOnSelect variant="dark" fixed="top" expand='md'>
                     <Container fluid>
-                    <Navbar.Brand href="/"><img 
+                    <Navbar.Brand><img 
                         src={logoRobotik} 
                         alt="logo"
                         height="auto"

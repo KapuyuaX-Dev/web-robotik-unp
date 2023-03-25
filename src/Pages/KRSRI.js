@@ -1,5 +1,5 @@
 import React from 'react'
-import Construction from '../Construction';
+import Construction from '../components/Construction';
 
 function KRSRI() {
     document.title = "KRSRI UNP";

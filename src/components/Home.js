@@ -11,22 +11,23 @@ const Home = () =>{
  return(
     <div id='home' className="home">
         <Container>
-            <Row>
-                <Col>
+            <Row className="baris">
+                <div className="left">
                     <p>
                         Unit Kegiatan Robotika Universitas Negeri Padang (UKRO UNP) atau lebih dikenal dengan <b>ROBOTIK UNP</b> merupakan sebuah unit yang mewadahi potensi mahasiswa UNP khususnya pada bidang rekayasa teknologi robotika. UKRO sendiri berdiri pada tanggal 10 September 2008 dengan nama <b><i>Gaza Robotik Team</i></b>. Nama <i>Gaza</i> diambil dari semangat juang Gaza yang pantang menyerah dan tidak mudah putus asa. <i>Gaza Robotik Team</i> ini masih berada di bawah naungan Fakultas Teknik UNP yang pada akhirnyaa di tahun 2019 menjadi salah satu UKM yang ada di tingkat Universitas. Pada saat ini nama Gaza Robotik Team berubah menjadi Unit Kegiatan Robotika Universitas Negeri Padang.
                     </p>
-                </Col>
-                <Col>
+                </div>
+                <div className="right">
                     <div className="ratio ratio-16x9 videoProfil">
-                        <iframe loading="lazy" width="280" height="auto" src="https://www.youtube.com/embed/AeYDPMnbTHQ?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" ></iframe>
+                        <iframe loading="lazy" width="auto" height="auto" src="https://www.youtube.com/embed/AeYDPMnbTHQ?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" ></iframe>
                     </div>
-                </Col>
+                </div>
             </Row>
             <Row>
               
             </Row>
         </Container>
+        <br></br>
         <div className="vision">
             <h2><span>VISION</span></h2>
             <Container>

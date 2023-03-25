@@ -1,26 +1,26 @@
-import HomePage from './components/HomePage';
-import KRAI from './components/KRAI/KRAI';
-import KRSBI from './components/KRSBI/KRSBI';
-import KRSTI from './components/KRSTI/KRSTI';
-import KRSRI from './components/KRSRI/KRSRI';
-import KRTMI from './components/KRTMI/KRTMI';
-import {BrowserRouter, Route, Routes} from "react-router-dom"
-import KRTI from './components/KRTI/KRTI';
+import HomePage from './Pages/HomePage';
+import KRAI from './Pages/KRAI';
+import KRSBI from './Pages/KRSBI';
+import KRSTI from './Pages/KRSTI';
+import KRSRI from './Pages/KRSRI';
+import KRTMI from './Pages/KRTMI';
+import {HashRouter as Router, Route, Routes} from "react-router-dom"
+import KRTI from './Pages/KRTI';
 
 
 function App() {
   return (
-      <BrowserRouter basename='/'>
+      <Router>
         <Routes>
-          <Route exact path='/' element={<HomePage/>}/>
-          <Route exact path='/KRAI' element={<KRAI/>}/>
-          <Route exact path='/KRSBI' element={<KRSBI/>}/>
-          <Route exact path='/KRSTI' element={<KRSTI/>}/>
-          <Route exact path='/KRSRI' element={<KRSRI/>}/>
-          <Route exact path='/KRTMI' element={<KRTMI/>}/>
-          <Route exact path='/KRTI' element={<KRTI/>}/>
+          <Route path='/' element={<HomePage/>}/>
+          <Route path='/KRAI' element={<KRAI/>}/>
+          <Route path='/KRSBI' element={<KRSBI/>}/>
+          <Route path='/KRSTI' element={<KRSTI/>}/>
+          <Route path='/KRSRI' element={<KRSRI/>}/>
+          <Route path='/KRTMI' element={<KRTMI/>}/>
+          <Route path='/KRTI' element={<KRTI/>}/>
         </Routes>
-      </BrowserRouter>
+      </Router>
   );
 }
 

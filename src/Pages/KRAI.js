@@ -1,5 +1,5 @@
 import React from 'react'
-import Construction from '../Construction';
+import Construction from '../components/Construction';
 function KRAI() {
   document.title = "KRAI UNP";
   return (
