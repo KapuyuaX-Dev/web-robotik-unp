@@ -7,14 +7,21 @@ import krstiImage from "../assets/image/krsti.png"
 import krtmiImage from "../assets/image/krtmi.png"
 import krtiImage from "../assets/image/krti.png"
 import { Link } from 'react-router-dom'
+import '../style/Teams.css'
+import Aos from "aos";
+import "aos/dist/aos.css"
+import { useEffect } from "react";
 
 function Teams() {
+  useEffect(()=>{
+    Aos.init({duration:2000});
+  },[])
+
   return (
     <div id='teams' className="teams">
-      <h2><span>TEAMS</span></h2>
-      <br></br><br></br>
       <Container>
-        <Row>
+        <h2 data-aos="fade-up">TEAMS</h2>
+        <Row data-aos="fade-up">
           <Col xs lg="4">
             <div className='text-center'>
             <Link to="/KRAI"><img src={kraiImage}></img></Link></div>
@@ -29,7 +36,7 @@ function Teams() {
           </Col>
         </Row>
         <br></br><br></br>
-        <Row>
+        <Row data-aos="fade-up">
           <Col xs lg="4">
           <div className='text-center'>
           <Link to="/KRSRI"><img src={krsriImage}></img></Link></div>

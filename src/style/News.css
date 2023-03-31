@@ -1,0 +1,19 @@
+.news{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.news h2{
+    font-size: 36px;
+    width: 130px;
+    color: #14213d;
+    border-bottom: 3px solid #FCA311;
+}
+
+.news .news-item{
+    margin: 15px 15px 10px 20px;
+}
+
+.news Button{
+    background-color: #14213d;   
+}

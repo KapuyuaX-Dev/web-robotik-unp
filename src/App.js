@@ -6,7 +6,7 @@ import KRSRI from './Pages/KRSRI';
 import KRTMI from './Pages/KRTMI';
 import {HashRouter as Router, Route, Routes} from "react-router-dom"
 import KRTI from './Pages/KRTI';
-
+import Sponsors from './Pages/Sponsors';
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
           <Route path='/KRSRI' element={<KRSRI/>}/>
           <Route path='/KRTMI' element={<KRTMI/>}/>
           <Route path='/KRTI' element={<KRTI/>}/>
+          <Route path='/sponsors' element={<Sponsors/>}/>
         </Routes>
       </Router>
   );

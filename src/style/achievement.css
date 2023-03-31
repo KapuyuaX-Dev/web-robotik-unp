@@ -1,0 +1,84 @@
+.achievement{
+    background-color: whitesmoke;
+}
+
+.achievement h2{
+    padding-top: 30px;
+    width: 470px;
+    color: #14213d;
+    border-bottom: 3px solid #FCA311;
+}
+
+.achievement .card{
+    width: 260px;
+    height: 300px;
+    margin-left: 15px;
+    margin-right: 15px;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.achievement .card::before{
+    content:'';
+    width: 90px;
+    height: 600px;
+    left: 110px;  
+    top: -150px;
+    background: linear-gradient(#00e5ff,#b400fb);
+    position: absolute;
+    animation: animate 4s linear infinite;
+    transform: rotate(285deg);
+}
+
+.achievement .card::after{
+    content:'';
+    position: absolute;
+    background: whitesmoke;
+    inset: 4px;
+    border-radius: 10px;
+}
+
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+.achievement img{
+    padding-bottom: 20px;
+    width: 100px;
+    z-index: 1;
+}
+
+.achievement .btn{
+    z-index: 1;
+    margin: 5px 10px 5px auto;
+    font-size: 8px;
+}
+
+.achievement Form{
+    padding-bottom: 15px;
+    margin-top: 5px;
+}
+
+.achievement p{
+    z-index: 1;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.achievement ul,h5{
+    z-index: 1;
+}
+
+.achievement li{
+    z-index: 1;
+    margin: 15px 10px 10px 10px;
+}

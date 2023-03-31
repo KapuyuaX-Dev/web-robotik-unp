@@ -6,7 +6,6 @@ import Teams from '../components/Teams';
 import Galery from '../components/Galery';
 import Sponsors from '../components/Sponsors';
 import Achievement from '../components/Achievement';
-import '../style/HomePage.css'
 
 function HomePage() {
   return (
@@ -17,7 +16,6 @@ function HomePage() {
       <Teams/>
       <Achievement/>
       <Galery/>
-      <Sponsors/>
       </div>
       <div className='footer'><Footer/></div>
     </div>

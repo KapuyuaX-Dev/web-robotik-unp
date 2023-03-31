@@ -1,0 +1,21 @@
+.teams{
+    background-color: #e5e5e5;
+}
+
+.teams h2{
+    padding-top: 30px;
+    margin-bottom: 30px;
+    width: 130px;
+    color: #14213d;
+    border-bottom: 3px solid #FCA311;
+}
+
+.teams img{
+    width: auto;
+    height: 180px;
+}
+
+.teams img:hover{
+    transform: scale(1.2);
+    opacity: 80%;
+}

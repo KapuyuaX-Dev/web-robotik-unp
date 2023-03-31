@@ -1,129 +1,185 @@
 import { Container, Row, Col } from "react-bootstrap";
+import Image from 'react-bootstrap/Image'
 import ketuaUmum from '../assets/image/ketum.png'
 import wkm from '../assets/image/wkm.png'
 import bendumI from '../assets/image/bendumI.png'
 import bendumII from '../assets/image/bendum-II.png'
 import sekretarisI from '../assets/image/sekre-I.png'
 import sekretarisII from '../assets/image/sekum-II.png'
+import '../style/Home.css'
+import robotLogo from '../assets/image/robotik.png'
+import NewsSection from "./NewsSection";
+import Intro from "./Intro";
+import Aos from "aos";
+import "aos/dist/aos.css"
+import { useEffect } from "react";
+
 
 const Home = () =>{
     document.title = "Robotik UNP";
+    useEffect(()=>{
+        Aos.init({duration:2000});
+    },[])
+    
  return(
-    <div id='home' className="home">
-        <Container>
-            <Row className="baris">
-                <div className="left">
-                    <p>
-                        Unit Kegiatan Robotika Universitas Negeri Padang (UKRO UNP) atau lebih dikenal dengan <b>ROBOTIK UNP</b> merupakan sebuah unit yang mewadahi potensi mahasiswa UNP khususnya pada bidang rekayasa teknologi robotika. UKRO sendiri berdiri pada tanggal 10 September 2008 dengan nama <b><i>Gaza Robotik Team</i></b>. Nama <i>Gaza</i> diambil dari semangat juang Gaza yang pantang menyerah dan tidak mudah putus asa. <i>Gaza Robotik Team</i> ini masih berada di bawah naungan Fakultas Teknik UNP yang pada akhirnyaa di tahun 2019 menjadi salah satu UKM yang ada di tingkat Universitas. Pada saat ini nama Gaza Robotik Team berubah menjadi Unit Kegiatan Robotika Universitas Negeri Padang.
-                    </p>
-                </div>
-                <div className="right">
+    <div className="home">
+        <Intro/>
+        <marquee style={{background:'#FCA311',color:'whitesmoke'}}>--Welcome to Robotics UNP Website--</marquee>
+        <div data-aos="fade-up" ><NewsSection/></div>
+        <div data-aos="fade-up" className="aboutSection">
+        <Container className="fluid d-md-flex justify-content-center">
+            <div className="about">
+                <h2>About us</h2>
+                        <Row className="about-description">
+                            <div className="kiri"><img src={robotLogo} alt='logo'></img></div>
+                            <div className="kanan"><p>Universitas Negeri Padang's Robotics Club, or often known as <b>ROBOTIK UNP</b> is a student activity club that accommodates students who have a strong passion for robotics engineering. ROBOTIK UNP was established on September 10th, 2008 under the name <b>Gaza Robotics Team</b>. The name <b>'Gaza'</b> was taken from the fighting spirit of Gaza, who never gives up easily. The Gaza Robotics Team was under the auspices of the Universitas Negeri Padang's Faculty of Engineering, which in 2018 became an official student activity club. As time went by, we decided to change the name from Gaza Robotics Team to the ROBOTIK UNP.</p>
+                            </div>
+                        </Row> 
+            </div>       
+        </Container>
+        </div>
+        
+        {/* <Container className="d-flex justify-content-center">
                     <div className="ratio ratio-16x9 videoProfil">
                         <iframe loading="lazy" width="auto" height="auto" src="https://www.youtube.com/embed/AeYDPMnbTHQ?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" ></iframe>
                     </div>
-                </div>
-            </Row>
-            <Row>
-              
-            </Row>
-        </Container>
-        <br></br>
-        <div className="vision">
-            <h2><span>VISION</span></h2>
-            <Container>
-                <br></br>
-                <center><h4>“Menjadi salah satu unit kegiatan mahasiswa yang mewadahi segenap civitas akademika Universitas Negeri Padang dibidang riset teknologi rekayasa robotika yang maju, berprestasi, unggul dan bermartabat di asia”</h4></center>
-                <br></br>
-                <br></br>
-                <center><h4 className="english-description">"Becoming one of the student activity club that accommodates the entire academic community of Universitas Negeri Padang in the field of robotics engineering technology research that is advanced, accomplished, superior and dignified in Asia"</h4></center>
-                <br></br>
-            </Container>
-        </div>
-        <div className="mission">
-            <h2><span>MISSION</span></h2>
-            <br></br>
-            <Container>
-                <ol type="1">
-                    <li>Menumbuh kembangkan kreativitas Mahasiswa dibidang riset teknologi rekayasa robotika </li>
-                    <li>Meningkatkan kualitas dan kuantitas Sumber Daya Manusia melalui pengembangan soft skill dan hard skill Mahasiswa</li>
-                    <li>Meningkatkan minat mahasiswa untuk dapat berperan aktif dalam kegiatan mahasiswa di bidang riset teknologi rekayasa robotika</li>
-                    <li>Meningkatkan minat mahasiswa untuk dapat berperan aktif dalam kegiatan mahasiswa di bidang riset teknologi rekayasa robotika</li>
-                    <li>Menjadi Pelopor dibidang riset teknologi dalam bidang rekayasa robotika di wilayah Sumatera</li>
-                    <li>Membangun kerja sama dengan unit kegiatan mahasiswa lainnya dan dunia industri di Indonesia yang bergerak dibidang teknologi rekayasa robotika</li>
-                </ol>
+        </Container> */}
 
-                <ol type="1">
-                    <li className="english-description">Develop students' creativity in the field of robotics engineering</li>
-                    <li className="english-description">Improve the quality and quantity of human resources through the development of soft skills and hard skills</li>
-                    <li className="english-description">Motivate students to take an active role in developing robotics engineering</li>
-                    <li className="english-description">Help realize Universitas Negeri Padang's vision and mission in becoming a leading and dignified university in Asia through robotics engineering</li>
-                    <li className="english-description">Become a technological pioneer in the field of robotics engineering in Sumatera</li>
-                    <li className="english-description">Collaborate with other student activities and parties that are involved in the development of robotics engineering in Indonesia</li>
-                </ol>
-            </Container>
-            <br></br>
-        </div>
-        <div className="pengurus">
-            <h2><span>ORGANIZATION STRUCTURE</span></h2>
-            <Container>
-                <br></br>
-                <Row>
-                    <div className="text-center">
-                        <h4>PRESIDENT</h4>
-                        <img src={ketuaUmum} alt='ketum' loading="lazy"></img>
-                        <h5>Willy Hardi Vernando</h5>
+        <div data-aos="fade-up" className="visionSection">
+        <Container className="fluid d-flex justify-content-center">
+            <div className="vision">
+                <h2>Vision</h2>
+                    <div className="vision-description d-flex">
+                    <center><h5>"Becoming one of the student activity club that accommodates the entire academic community of Universitas Negeri Padang in the field of robotics engineering technology research that is advanced, accomplished, superior and dignified in Asia"</h5></center>
+ 
                     </div>
+            </div>       
+        </Container>
+        </div>
+        
+        <div data-aos="fade-up" className="missionSection">
+        <Container className="fluid d-flex justify-content-center">
+            <div className="mission">
+                <h2>Mission</h2>
+                    <div className="vision-description d-flex">
+                        <ol type="1">
+                        <li>Develop students' creativity in the field of robotics engineering</li>
+                        <li>Improve the quality and quantity of human resources through the development of soft skills and hard skills</li>
+                        <li>Motivate students to take an active role in developing robotics engineering</li>
+                        <li>Help realize Universitas Negeri Padang's vision and mission in becoming a leading and dignified university in Asia through robotics engineering</li>
+                        <li>Become a technological pioneer in the field of robotics engineering in Sumatera</li>
+                        <li>Collaborate with other student activities and parties that are involved in the development of robotics engineering in Indonesia</li>
+                         </ol>
+                    </div>
+            </div>       
+        </Container>
+        </div>
+
+        <div data-aos="fade-up" className="pengurus">
+            <Container className="d-md-block">
+                <h2>ORGANIZATION STRUCTURE</h2>
+                <Row data-aos="fade-up">
+                <Col className="president">
+                    <div className="text-center">
+                    <div className="card">
+                        <div className="d-flex">
+                            <Image roundedCircle="true" src={ketuaUmum}/>
+                            <div className="profileCard-description">
+                                <h2>Willy Hardi Vernando</h2>
+                                <h3>President</h3>
+                                <h3>Mechanical Eng.</h3>
+                            </div>                         
+                        </div>
+                    </div>
+                    </div>
+                    </Col>
                 </Row>
-                <br></br>
-                <Row>
-                    <Col xs lg="4">
-                        <div className="text-center">
-                            <h4>VICE PRESIDENT of OPERATIONS</h4>
-                            
-                            <h5>Relif Hagler Sentosa Marbun</h5>
+                <Row data-aos="fade-up">
+                    <Col>
+                    <div className="text-center">
+                    <div className="card">
+                        <div className="d-flex">
+                            <Image roundedCircle="true" src='' alt="wkt"/>
+                            <div className="profileCard-description">
+                                <h2>Relif Hagler Sentosa M.</h2>
+                                <h3>Vice President of Technical Teams</h3>
+                                <h3>Electrical Eng.</h3>
+                            </div>
                         </div>
+                    </div>
+                    </div>
                     </Col>
-                    <Col xs lg="4"> 
-                        <div className="text-center">
-                            <h4>VICE PRESIDENT of MANAGEMENT</h4>
-                            <img src={wkm} alt='wkm' loading="lazy"></img>
-                            <h5>Dadang Suriana Fahreza</h5>
+
+                    <Col>
+                    <div className="card">
+                        <div className="d-flex">
+                            <Image roundedCircle="true" src={wkm}/>
+                            <div className="profileCard-description">
+                                <h2>Dadang Suriana Fahreza</h2>
+                                <h3>Vice President of Management Teams</h3>
+                                <h3>Electrical Eng.</h3>
+                            </div>
                         </div>
+                    </div>
                     </Col>
-                    <Col xs lg="4">
-                        <div className="text-center">
-                            <h4>TREASURER I</h4>
-                            <img src={bendumI} alt='bendumI' loading="lazy"></img>
-                            <h5>Kurnia Innalillahi</h5>
+
+                    <Col>
+                    <div className="card">
+                        <div className="d-flex">
+                            <Image roundedCircle="true" src={bendumI}/>
+                            <div className="profileCard-description">
+                                <h2>Kurnia Illahi</h2>
+                                <h3>Treasurer I</h3>
+                                <h3>Physics</h3>
+                            </div>
                         </div>
+                    </div>
                     </Col>
                 </Row>
-                <Row>
-                    <Col xs lg="4">
-                        <div className="text-center">
-                            <h4>TREASURER II</h4>
-                            <img src={bendumII} alt='bendumII' loading="lazy"></img>
-                            <h5>Auliya Einsrizkianne Edray</h5>
+                <Row data-aos="fade-up">
+                    <Col>
+                    <div className="text-center">
+                    <div className="card">
+                        <div className="d-flex">
+                            <Image roundedCircle="true" src={bendumII}/>
+                            <div className="profileCard-description">
+                                <h2>Auliya Einsrizkianne Edray</h2>
+                                <h3>Treasurer II</h3>
+                                <h3>Elementary School Teacher Education</h3>
+                            </div>
                         </div>
+                    </div>
+                    </div>
                     </Col>
-                    <Col xs lg="4">
-                        <div className="text-center">
-                            <h4>SECRETARY I</h4>
-                            <img src={sekretarisI} alt='sekretarisI' loading="lazy"></img>
-                            <h5>Gusvito Habiby</h5>
+
+                    <Col>
+                    <div className="card">
+                        <div className="d-flex">
+                            <Image roundedCircle="true" src={sekretarisI}/>
+                            <div className="profileCard-description">
+                                <h2>Gusvito Habiby</h2>
+                                <h3>Secretary I</h3>
+                                <h3>Electrical Eng.</h3>
+                            </div>
                         </div>
+                    </div>
                     </Col>
-                    <Col xs lg="4">
-                        <div className="text-center">
-                            <h4>SECRETARY II</h4>
-                            <img src={sekretarisII} alt='sekretarisII' loading="lazy"></img>
-                            <h5>Delila Agustina Tinambunan</h5>
+
+                    <Col>
+                    <div className="card">
+                        <div className="d-flex">
+                            <Image roundedCircle="true" src={sekretarisII}/>
+                            <div className="profileCard-description">
+                                <h2>Delila Agustin T.</h2>
+                                <h3>Secretary II</h3>
+                                <h3>Electrical Eng.</h3>
+                            </div>
                         </div>
+                    </div>
                     </Col>
                 </Row>
             </Container>
         </div>
-    
     </div>
  )
 }

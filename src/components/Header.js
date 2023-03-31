@@ -1,9 +1,11 @@
 import React from 'react'
 import NavigationBar from './NavigationBar'
+import '../style/Header.css'
+
 function Header() {
   return (
     <div>
-    <div id='main' className='header'>
+    <div className='header'>
         <NavigationBar/>
     </div>
     </div>
