@@ -3,7 +3,15 @@ import { Button, Card, Container } from 'react-bootstrap'
 import '../style/News.css'
 import banner from '../assets/image/newsBanner.jpg'
 
+import Aos from "aos";
+import "aos/dist/aos.css"
+import { useEffect } from "react";
+
 function NewsSection() {
+  useEffect(()=>{
+    Aos.init({duration:2000});
+},[])
+
   const [news, setNews] = useState([
   {
     title:'News Title',
@@ -40,10 +48,10 @@ function NewsSection() {
     <div className='news'>
         <Container>
            <h2>NEWS</h2>
-           <div className='d-lg-flex justify-items-center news-item'>
+           <div className='d-lg-flex justify-items-center news-item align-content-center'>
             {
               news.map((news,i)=>(
-                <Card key={i} style={{width:'15rem', margin:'10px'}}>
+                <Card data-aos="fade-up" key={i} style={{width:'15rem', margin:'10px'}}>
                   <Card.Img variant='top' src={banner} alt='news-Image'/>
                   <Card.Body>
                     <Card.Title>{news.title}</Card.Title>

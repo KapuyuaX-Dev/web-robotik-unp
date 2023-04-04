@@ -148,6 +148,8 @@
     margin-left: 10px;
     margin-bottom: 30px;
     overflow: hidden;
+    display: grid;
+    grid-template-columns: 130px 200px;
 }
 
 .pengurus .card::before{
@@ -276,12 +278,11 @@
         letter-spacing: 2px;
         font-weight: bold;
         font-family:sans-serif;
-        margin-top: 30px;
         padding: 0px 10px;
         width: 200px;
         border-bottom: none;
-        align-items: center;
-        margin-left: 120px;
+        text-align: center;
+        margin: 30px auto;
     }
 
     .about .about-description img{
@@ -290,10 +291,67 @@
         margin-left: 25px;
     }
     .about-description .kiri{
-        margin-left: 12%;
+        margin: 25px auto;
     }
     
     .about-description .kanan{
        margin-left: 12%;
+    }
+
+    .pengurus h2{
+        margin-top: 30px;
+        width: 220px;
+        color: #14213d;
+        border-bottom: 3px solid #FCA311;
+    }
+
+    .pengurus .card{
+        width: 300px;
+        height: 300px;
+        background-color: whitesmoke;
+        border-radius: 5px;
+        /*box-shadow: 0px 6px 11px 0px rgba(0, 0, 0, 0.5);*/
+        /*border: 3px solid #e5e5e5;*/
+        margin: 20px auto;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 300px;
+    }
+
+    .pengurus .card::before{
+        width: 90px;
+        height: 600px;
+    }
+
+    .pengurus img{
+        background-color: #e5e5e5;
+        height: 100px;
+        width: 100px;
+        margin: 25px 15px 0px 100px;
+        z-index: 1;
+     }
+
+     .pengurus .card .profileCard-description{
+        background-color: whitesmoke;
+        z-index: 1;
+        margin: 20px auto;
+    }
+
+    .pengurus .card h2{
+        font-size: 18px;
+        font-family: sans-serif;
+        font-weight: bold;
+        margin: 15px 15px 10px 10px;
+        text-align: center;
+        border: none;
+        color: black;
+    }
+    
+    .pengurus .card h3{
+        color: gray;
+        font-size: 14px;
+        font-family: sans-serif;
+        margin: 10px 15px 10px 10px;
+        text-align: center;
     }
 }

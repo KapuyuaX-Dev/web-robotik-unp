@@ -4,7 +4,7 @@
 
 .achievement h2{
     padding-top: 30px;
-    width: 470px;
+    width: 270px;
     color: #14213d;
     border-bottom: 3px solid #FCA311;
 }
@@ -28,7 +28,6 @@
     background: linear-gradient(#00e5ff,#b400fb);
     position: absolute;
     animation: animate 4s linear infinite;
-    transform: rotate(285deg);
 }
 
 .achievement .card::after{
@@ -37,6 +36,7 @@
     background: whitesmoke;
     inset: 4px;
     border-radius: 10px;
+    
 }
 
 @keyframes animate{
@@ -81,4 +81,66 @@
 .achievement li{
     z-index: 1;
     margin: 15px 10px 10px 10px;
+}
+
+.achievement .invention{
+    width: 750px;
+    height: 360px;
+    background-color: whitesmoke;
+    border: 2px solid #e5e5e5;
+    border-radius: 6px;
+    box-shadow: 0px 6px 11px 0px rgba(0, 0, 0, 0.8); 
+    margin-bottom: 50px;
+}
+
+.achievement .invention h3{
+    margin-top: -20px;
+    text-align: end;
+    margin-right: 150px;
+}
+
+.achievement .invention .description{
+    height: auto;
+    display: grid;
+    grid-template-columns: 470px auto;
+}
+
+.achievement .invention p{
+    margin: 20px 15px 20px 30px ;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.achievement .invention img{
+    display: flex;
+    width: 200px;
+    animation: boxAnimate 2s linear infinite;
+}
+
+@keyframes boxAnimate{
+    0%{
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+    25%{
+        margin-top: 0px;
+        margin-left: 10px;
+    }
+    50%{
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .achievement h2{
+        padding-top: 30px;
+        width: 220px;
+        color: #14213d;
+        border-bottom: 3px solid #FCA311;
+    }
+
+    .achievement .card{
+        margin: 20px auto;
+    }
 }

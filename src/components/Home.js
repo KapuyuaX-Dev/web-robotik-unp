@@ -1,6 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import Image from 'react-bootstrap/Image'
 import ketuaUmum from '../assets/image/ketum.png'
+import wkt from '../assets/image/wkt.png'
 import wkm from '../assets/image/wkm.png'
 import bendumI from '../assets/image/bendumI.png'
 import bendumII from '../assets/image/bendum-II.png'
@@ -31,7 +32,7 @@ const Home = () =>{
             <div className="about">
                 <h2>About us</h2>
                         <Row className="about-description">
-                            <div className="kiri"><img src={robotLogo} alt='logo'></img></div>
+                            <div className="kiri"><img src={process.env.PUBLIC_URL+'/image/robotik.png'} alt='logo'></img></div>
                             <div className="kanan"><p>Universitas Negeri Padang's Robotics Club, or often known as <b>ROBOTIK UNP</b> is a student activity club that accommodates students who have a strong passion for robotics engineering. ROBOTIK UNP was established on September 10th, 2008 under the name <b>Gaza Robotics Team</b>. The name <b>'Gaza'</b> was taken from the fighting spirit of Gaza, who never gives up easily. The Gaza Robotics Team was under the auspices of the Universitas Negeri Padang's Faculty of Engineering, which in 2018 became an official student activity club. As time went by, we decided to change the name from Gaza Robotics Team to the ROBOTIK UNP.</p>
                             </div>
                         </Row> 
@@ -82,14 +83,12 @@ const Home = () =>{
                 <Col className="president">
                     <div className="text-center">
                     <div className="card">
-                        <div className="d-flex">
                             <Image roundedCircle="true" src={ketuaUmum}/>
                             <div className="profileCard-description">
                                 <h2>Willy Hardi Vernando</h2>
                                 <h3>President</h3>
                                 <h3>Mechanical Eng.</h3>
                             </div>                         
-                        </div>
                     </div>
                     </div>
                     </Col>
@@ -98,41 +97,35 @@ const Home = () =>{
                     <Col>
                     <div className="text-center">
                     <div className="card">
-                        <div className="d-flex">
-                            <Image roundedCircle="true" src='' alt="wkt"/>
+                            <Image roundedCircle="true" src={wkt} alt="wkt"/>
                             <div className="profileCard-description">
                                 <h2>Relif Hagler Sentosa M.</h2>
                                 <h3>Vice President of Technical Teams</h3>
                                 <h3>Electrical Eng.</h3>
                             </div>
-                        </div>
                     </div>
                     </div>
                     </Col>
 
                     <Col>
                     <div className="card">
-                        <div className="d-flex">
                             <Image roundedCircle="true" src={wkm}/>
                             <div className="profileCard-description">
                                 <h2>Dadang Suriana Fahreza</h2>
                                 <h3>Vice President of Management Teams</h3>
                                 <h3>Electrical Eng.</h3>
                             </div>
-                        </div>
                     </div>
                     </Col>
 
                     <Col>
                     <div className="card">
-                        <div className="d-flex">
                             <Image roundedCircle="true" src={bendumI}/>
                             <div className="profileCard-description">
                                 <h2>Kurnia Illahi</h2>
                                 <h3>Treasurer I</h3>
                                 <h3>Physics</h3>
                             </div>
-                        </div>
                     </div>
                     </Col>
                 </Row>
@@ -140,41 +133,35 @@ const Home = () =>{
                     <Col>
                     <div className="text-center">
                     <div className="card">
-                        <div className="d-flex">
                             <Image roundedCircle="true" src={bendumII}/>
                             <div className="profileCard-description">
                                 <h2>Auliya Einsrizkianne Edray</h2>
                                 <h3>Treasurer II</h3>
                                 <h3>Elementary School Teacher Education</h3>
                             </div>
-                        </div>
                     </div>
                     </div>
                     </Col>
 
                     <Col>
                     <div className="card">
-                        <div className="d-flex">
                             <Image roundedCircle="true" src={sekretarisI}/>
                             <div className="profileCard-description">
                                 <h2>Gusvito Habiby</h2>
                                 <h3>Secretary I</h3>
                                 <h3>Electrical Eng.</h3>
                             </div>
-                        </div>
                     </div>
                     </Col>
 
                     <Col>
                     <div className="card">
-                        <div className="d-flex">
                             <Image roundedCircle="true" src={sekretarisII}/>
                             <div className="profileCard-description">
                                 <h2>Delila Agustin T.</h2>
                                 <h3>Secretary II</h3>
                                 <h3>Electrical Eng.</h3>
                             </div>
-                        </div>
                     </div>
                     </Col>
                 </Row>
