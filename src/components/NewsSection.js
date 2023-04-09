@@ -6,12 +6,13 @@ import banner from '../assets/image/newsBanner.jpg'
 import Aos from "aos";
 import "aos/dist/aos.css"
 import { useEffect } from "react";
+import { useNavigate } from 'react-router-dom';
 
 function NewsSection() {
   useEffect(()=>{
     Aos.init({duration:2000});
 },[])
-
+  const navigate = useNavigate()
   const [news, setNews] = useState([
   {
     title:'News Title',
@@ -43,7 +44,6 @@ function NewsSection() {
   
   ])
 
-
   return (
     <div className='news'>
         <Container>
@@ -65,11 +65,12 @@ function NewsSection() {
               </Card>
               ))
             }
-
            </div>
            {/* <Button className='float-end'>More News</Button> */}
         </Container>
-        
+        <Container className='d-flex align-items-center justify-content-end'>
+          <div data-aos="fade-up" className='more' onClick={()=>navigate('/news')}>More News→</div>
+        </Container>
     </div>
   )
 }

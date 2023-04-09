@@ -8,6 +8,7 @@ import {HashRouter as Router, Route, Routes} from "react-router-dom"
 import KRTI from './Pages/KRTI';
 import Sponsors from './Pages/Sponsors';
 import Galery from './Pages/Galery';
+import News from './Pages/News';
 function App() {
   return (
       <Router>
@@ -21,6 +22,7 @@ function App() {
           <Route path='/KRTI' element={<KRTI/>}/>
           <Route path='/sponsors' element={<Sponsors/>}/>
           <Route path='/gallery' element={<Galery/>}/>
+          <Route path='/news' element={<News/>}/>
         </Routes>
       </Router>
   );
