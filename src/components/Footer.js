@@ -17,7 +17,7 @@ const Footer = () =>{
                     <a href="https://www.instagram.com/robotic_unp/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
                     <ion-icon name="logo-linkedin"></ion-icon>
                     <a href="https://www.youtube.com/@robotic_unp3859" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a>
-                    <a href="https://goo.gl/maps/YHUeq4KTyJ3uuAvs5" target="_blank"><ion-icon name="location-sharp"></ion-icon></a>
+                    <a href="https://goo.gl/maps/DjHcsz9oG3a6bsSg6" target="_blank"><ion-icon name="location-sharp"></ion-icon></a>
                     <a href="https://wa.me/+6282294455403" target="_blank"><ion-icon name="call-sharp"></ion-icon></a>
                     <a href="mailto:gazarobotikunp@gmail.com"><ion-icon name="mail-open-sharp"></ion-icon></a>
                 </Col>
