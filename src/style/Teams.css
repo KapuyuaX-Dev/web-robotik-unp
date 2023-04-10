@@ -11,11 +11,16 @@
 }
 
 .teams img{
-    width: auto;
+    width: 180px;
     height: 180px;
+    object-fit: contain;
 }
 
 .teams img:hover{
     transform: scale(1.2);
     opacity: 80%;
+}
+
+.teams .logo{
+    gap: 100px;
 }

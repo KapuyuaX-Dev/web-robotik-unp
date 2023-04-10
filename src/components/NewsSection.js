@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Button, Card, Container } from 'react-bootstrap'
 import '../style/News.css'
-import banner from '../assets/image/newsBanner.jpg'
 
 import Aos from "aos";
 import "aos/dist/aos.css"
@@ -52,7 +51,7 @@ function NewsSection() {
             {
               news.map((news,i)=>(
                 <Card data-aos="fade-up" key={i} style={{width:'15rem', margin:'10px'}}>
-                  <Card.Img variant='top' src={banner} alt='news-Image'/>
+                  <Card.Img variant='top' src={process.env.PUBLIC_URL+'/image/newsBanner.jpg'} alt='news-Image'/>
                   <Card.Body>
                     <Card.Title>{news.title}</Card.Title>
                     <p className="mt-2 text-muted fs-6 fw-light">29/03/2023, 21:07 WIB</p> 

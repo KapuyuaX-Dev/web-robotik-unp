@@ -1,11 +1,10 @@
 import React from 'react'
-import banner from '../assets/bg/intro.jpg'
 import '../style/Intro.css'
 
 function Intro() {
   return (
     <div className='banner'>
-        <img src={banner}/>
+        <img src={process.env.PUBLIC_URL+'/image/bg/intro.jpg'}/>
     </div>
   )
 }

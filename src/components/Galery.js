@@ -70,7 +70,7 @@ function Galery() {
                   <img data-aos="fade-up" key={i} src={process.env.PUBLIC_URL+'/image/gallery/'+image} onClick={handleImageClick}/>
               ))
             }
-            <div className='item d-flex align-items-center justify-content-center text-center more' onClick={()=>navigate('/Gallery')} >More . . .</div>
+            <div data-aos="fade-up" className='item d-flex align-items-center justify-content-center text-center more' onClick={()=>navigate('/Gallery')} >More . . .</div>
           </OwlCarousel> 
           </div>
         </Container>

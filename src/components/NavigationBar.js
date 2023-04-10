@@ -1,6 +1,5 @@
 import { Navbar, Container, Nav } from "react-bootstrap"
 import { Link } from "react-scroll";
-import logoRobotik from "../assets/image/robotik.png"
 import { NavLink } from 'react-router-dom'
 
 const NavigationBar = () => {
@@ -11,7 +10,7 @@ const NavigationBar = () => {
                     <Navbar collapseOnSelect variant="dark" fixed="top" expand='md' className="colorNav">
                     <Container fluid>
                     <Navbar.Brand href="/#"><img 
-                        src={logoRobotik} 
+                        src={process.env.PUBLIC_URL+'/image/robotik.png'} 
                         alt="logo"
                         height="auto"
                         width="30"

@@ -84,8 +84,9 @@
 }
 
 .achievement .invention{
-    width: 750px;
+    max-width: 750px;
     height: 360px;
+    width: 100%;
     background-color: whitesmoke;
     border: 2px solid #e5e5e5;
     border-radius: 6px;
@@ -102,7 +103,10 @@
 .achievement .invention .description{
     height: auto;
     display: grid;
-    grid-template-columns: 470px auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    grid-template-columns: auto 470px;
+    text-align: justify;
 }
 
 .achievement .invention p{
@@ -142,5 +146,59 @@
 
     .achievement .card{
         margin: 20px auto;
+    }
+
+    .achievement .invention{
+       width: 85%;
+       height: auto;
+    }
+
+    .achievement .invention .description{
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: justify;
+        margin: 5px auto;
+    }
+
+    .achievement .invention img{
+        display: flex;
+        width: 120px;
+        animation: none;
+        margin: 10px auto;
+    }
+
+    .achievement .invention h3{
+        padding-top: 15px;
+        margin: 10px auto;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .achievement .invention{
+       width: 95%;
+       height: auto;
+    }
+
+    .achievement .invention .description{
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: justify;
+        margin: 5px auto;
+    }
+
+    .achievement .invention img{
+        display: flex;
+        width: 120px;
+        animation: none;
+        margin: 10px auto;
+    }
+
+    .achievement .invention h3{
+        padding-top: 15px;
+        margin: 10px auto;
+        text-align: center;
     }
 }

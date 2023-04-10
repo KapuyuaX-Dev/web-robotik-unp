@@ -1,20 +1,11 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import Image from 'react-bootstrap/Image'
-import ketuaUmum from '../assets/image/ketum.png'
-import wkt from '../assets/image/wkt.png'
-import wkm from '../assets/image/wkm.png'
-import bendumI from '../assets/image/bendumI.png'
-import bendumII from '../assets/image/bendum-II.png'
-import sekretarisI from '../assets/image/sekre-I.png'
-import sekretarisII from '../assets/image/sekum-II.png'
 import '../style/Home.css'
-import robotLogo from '../assets/image/robotik.png'
 import NewsSection from "./NewsSection";
 import Intro from "./Intro";
 import Aos from "aos";
 import "aos/dist/aos.css"
 import { useEffect } from "react";
-
 
 const Home = () =>{
     document.title = "Robotik UNP";
@@ -77,94 +68,73 @@ const Home = () =>{
         </div>
 
         <div data-aos="fade-up" className="pengurus">
-            <Container className="d-md-block">
+            <Container className="pb-2">
                 <h2>ORGANIZATION STRUCTURE</h2>
-                <Row data-aos="fade-up">
-                <Col className="president">
-                    <div className="text-center">
-                    <div className="card">
-                            <Image roundedCircle="true" src={ketuaUmum}/>
+                <Container className="d-md-flex justify-content-center align-items-center flex-wrap mt-5 m-3 gap-3">
+                    <div data-aos="fade-up" className="card">
+                            <Image roundedCircle="true" src={process.env.PUBLIC_URL+'/image/ketum.png'}/>
                             <div className="profileCard-description">
                                 <h2>Willy Hardi Vernando</h2>
                                 <h3>President</h3>
                                 <h3>Mechanical Eng.</h3>
                             </div>                         
                     </div>
-                    </div>
-                    </Col>
-                </Row>
-                <Row data-aos="fade-up">
-                    <Col>
-                    <div className="text-center">
-                    <div className="card">
-                            <Image roundedCircle="true" src={wkt} alt="wkt"/>
+                </Container>
+                <Container className="d-md-flex justify-content-center align-items-center flex-wrap m-3 gap-3">
+                    <div data-aos="fade-up" className="card">
+                        <Image roundedCircle="true" src={process.env.PUBLIC_URL+'/image/wkt.png'} alt="wkt"/>
                             <div className="profileCard-description">
                                 <h2>Relif Hagler Sentosa M.</h2>
                                 <h3>Vice President of Technical Teams</h3>
                                 <h3>Electrical Eng.</h3>
                             </div>
                     </div>
-                    </div>
-                    </Col>
 
-                    <Col>
-                    <div className="card">
-                            <Image roundedCircle="true" src={wkm}/>
+                    <div data-aos="fade-up" className="card">
+                            <Image roundedCircle="true" src={process.env.PUBLIC_URL+'/image/wkm.png'}/>
                             <div className="profileCard-description">
                                 <h2>Dadang Suriana Fahreza</h2>
                                 <h3>Vice President of Management Teams</h3>
                                 <h3>Electrical Eng.</h3>
                             </div>
                     </div>
-                    </Col>
 
-                    <Col>
-                    <div className="card">
-                            <Image roundedCircle="true" src={bendumI}/>
+                    <div data-aos="fade-up" className="card">
+                            <Image roundedCircle="true" src={process.env.PUBLIC_URL+'/image/bendumI.png'}/>
                             <div className="profileCard-description">
                                 <h2>Kurnia Illahi</h2>
                                 <h3>Treasurer I</h3>
                                 <h3>Physics</h3>
                             </div>
                     </div>
-                    </Col>
-                </Row>
-                <Row data-aos="fade-up">
-                    <Col>
-                    <div className="text-center">
-                    <div className="card">
-                            <Image roundedCircle="true" src={bendumII}/>
+
+                    <div data-aos="fade-up" className="card">
+                            <Image roundedCircle="true" src={process.env.PUBLIC_URL+'/image/bendum-II.png'}/>
                             <div className="profileCard-description">
                                 <h2>Auliya Einsrizkianne Edray</h2>
                                 <h3>Treasurer II</h3>
                                 <h3>Elementary School Teacher Education</h3>
                             </div>
                     </div>
-                    </div>
-                    </Col>
 
-                    <Col>
-                    <div className="card">
-                            <Image roundedCircle="true" src={sekretarisI}/>
+                    <div data-aos="fade-up" className="card">
+                            <Image roundedCircle="true" src={process.env.PUBLIC_URL+'/image/sekre-I.png'}/>
                             <div className="profileCard-description">
                                 <h2>Gusvito Habiby</h2>
                                 <h3>Secretary I</h3>
                                 <h3>Electrical Eng.</h3>
                             </div>
                     </div>
-                    </Col>
 
-                    <Col>
-                    <div className="card">
-                            <Image roundedCircle="true" src={sekretarisII}/>
+                    <div data-aos="fade-up" className="card">
+                            <Image roundedCircle="true" src={process.env.PUBLIC_URL+'/image/sekum-II.png'}/>
                             <div className="profileCard-description">
                                 <h2>Delila Agustin T.</h2>
                                 <h3>Secretary II</h3>
                                 <h3>Electrical Eng.</h3>
                             </div>
                     </div>
-                    </Col>
-                </Row>
+                </Container>
             </Container>
         </div>
     </div>

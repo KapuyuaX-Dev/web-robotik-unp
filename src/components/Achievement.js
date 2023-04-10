@@ -97,7 +97,7 @@ const [achievementKRTI, setAchievementKRTI] = useState([
       },
     {
       title:"Automatic Bin Upe",
-      image:'/image/',
+      image:'/image/binUpe.png',
       description:"Automatic Bin UPE (Unic, Profitable, and Environment Socialable) merupakan sebuah inovasi tempat sampah otomatis yang dibuat dalam rangka menarik minat masyarakat dalam membuang sampah. Alat ini dirancang layaknya mesin ATM namun memiliki sedikit perbedaan dalam sistem kerjanya. Prinsip Kerja alat yaitu apabila seseorang memasukan sampah botol plastik ke dalam Automatic Bin UPE, maka alat secara otomatis dapat menghitung jumlah sampah yang masuk dengan harga masing-masing botol yang sudah ditentukan. Setelah semua sampah botol dimasukkan maka akan keluar kupon yang menampilkan total harga dari pembuangan sampah"
       }
   ])
@@ -206,8 +206,8 @@ const eventKRTITrigger = e =>{
                   <div data-aos="fade-up" key={i} className='invention'>
                     <h3>{invention.title}</h3>
                     <div className='description'>
-                    <p>{invention.description}</p>
                     <img src={process.env.PUBLIC_URL+invention.image} alt='img'/>
+                    <p>{invention.description}</p>
                   </div>
                  </div>
                 ))
