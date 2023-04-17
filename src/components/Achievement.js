@@ -83,22 +83,22 @@ const [achievementKRTI, setAchievementKRTI] = useState([
     {
     title:"Robot Antisipasi Corona",
     image:'/image/robana.png',
-    description:"ROBANA (Robot Antisipasi Corona) merupakan robot berbasis image processing dengan menerapkan metode machine learning yang dikendalikan oleh mini PC. Robana berfungsi sebagai robot penjaga pintu masuk Research Center Universitas Negeri Padang. Robot ini dilengkapi dengan fitur mampu mendeteksi penggunaan masker, suhu tubuh, dan penggunaan hand sanitizer otomatis. Selain itu, robot ini mampu memberikan instruksi dan peringatan kepada pengguna yang tidak menggunakan masker atau suhu tubuh diatas 37.8°C."
+    description:"ROBANA (Robot Antisipasi Corona) is an image processing-based robot that applies machine learning methods controlled by a mini PC. Robana serves as a guard robot at the entrance of the Research Center of Universitas Negeri Padang. This robot is equipped with features that can detect the use of masks, body temperature, and automatic hand sanitizer use. In addition, this robot is able to provide instructions and warnings to users who do not wear masks or have a body temperature above 37.8°C."
     },
     {
       title:"Bilik Sterilisasi",
       image:'/image/bilikSterilisasi.png',
-      description:"Bilik Sterilisasi merupakan alat yang diciptakan guna memutus rantai penyebaran Covid-19 di masyarakat. Cara kerja alat ini yaitu menyemprotkan cairan desinfektan Ketika mendeteksi adanya orang berada di dalam bilik sterilisasi ini. Alat ini menggunakan sensor proximixy untuk mendeteksi adanya orang di dalam dan menggunakan cairan desinfektan yang aman untuk kulit manusia."
+      description:"Bilik Sterilisasi is a device created to break the chain of Covid-19 transmission in the community. The way this device works is by spraying disinfectant fluid when it detects that there is someone inside the sterilization chamber. The device uses a proximity sensor to detect the presence of a person inside and uses disinfectant fluid that is safe for human skin."
     },
     {
       title:"Automatic Handsanitizer Dispenser",
       image:'/image/sanitizer.png',
-      description:"Automatic Handsanitizer Dispenser merupakan handsanitizer otomatis yang diciptakan guna memutus rantai penyebaran Covid-19 di masyarakat. Handsinitizer ini dilengkapi sensor suhu yang berfungsi mendeteksi suhu pengguna dan lcd yang akan menampilkan hasil pembacaan suhu tubuhnya pada saat itu. Alat ini juga dilengkapi dengan buzzer sebagai alarm peringatan yang dapat berbunyi ketika mendeteksi suhu pengguna diatas suhu normal manusia yaitu >37.8°C"
+      description:"Automatic Handsanitizer Dispenser is an automatic handsanitizer created to break the chain of Covid-19 transmission in the community. This handsanitizer is equipped with a temperature sensor that functions to detect the user's body temperature, and an LCD that will display the body temperature reading at that time. This device is also equipped with a buzzer as a warning alarm that can sound when detecting a user's temperature above the normal human temperature, which is >37.8°C."
       },
     {
       title:"Automatic Bin Upe",
       image:'/image/binUpe.png',
-      description:"Automatic Bin UPE (Unic, Profitable, and Environment Socialable) merupakan sebuah inovasi tempat sampah otomatis yang dibuat dalam rangka menarik minat masyarakat dalam membuang sampah. Alat ini dirancang layaknya mesin ATM namun memiliki sedikit perbedaan dalam sistem kerjanya. Prinsip Kerja alat yaitu apabila seseorang memasukan sampah botol plastik ke dalam Automatic Bin UPE, maka alat secara otomatis dapat menghitung jumlah sampah yang masuk dengan harga masing-masing botol yang sudah ditentukan. Setelah semua sampah botol dimasukkan maka akan keluar kupon yang menampilkan total harga dari pembuangan sampah"
+      description:"The Automatic Bin UPE (Unic, Profitable, and Environment Socialable) is an innovation of an automatic trash can designed to attract people's interest in disposing of their waste properly. This device is designed like an ATM machine, but with a slightly different working system. The principle of the device is that when someone puts plastic bottles into the Automatic Bin UPE, the device can automatically count the number of items that have entered and calculate the price of each bottle that has been predetermined. After all the bottles have been deposited, a coupon will be issued, displaying the total price of the waste disposal."
       }
   ])
 

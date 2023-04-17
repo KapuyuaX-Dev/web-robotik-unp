@@ -14,13 +14,53 @@ const Home = () =>{
     useEffect(()=>{
         Aos.init({duration:2000});
     },[])
-    console.log(floatingBtn)
+
+    const [dayLeft, setDayLeft] = useState(0);
+    const [texts, setTexts] = useState(['--Welcome to Robotics UNP Website--', 
+    "--Let's Get Creative with Technology--",
+    new Date().toLocaleString('id-ID', { timeZone: 'Asia/Jakarta', hour12: false}),
+    `H-${dayLeft} Kontes Robot Indonesia Wilayah I 2023` 
+    ]);
+    
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+          const countDownDate = new Date('May 28, 2023 00:00:00').getTime();
+          const newTime = new Date().toLocaleString('en-US', { timeZone: 'Asia/Jakarta', hour12: false, weekday: 'long', day: 'numeric', month: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric'  });
+          const now = new Date().getTime();
+          const distance = countDownDate - now;
+          const daysLeft = Math.ceil(distance / (1000 * 60 * 60 * 24));
+          setDayLeft(daysLeft);
+          setTexts(prevTexts => [prevTexts[0], prevTexts[1], newTime, `H-${dayLeft} Kontes Robot Indonesia Wilayah I 2023` ]);
+        }, 1000);
+        return () => clearInterval(intervalId);
+      }, []);
+
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+    const intervalId = setInterval(() => {
+      const nextIndex = (currentIndex + 1) % texts.length;
+      setCurrentIndex(nextIndex);
+    }, 15000);
+    return () => clearInterval(intervalId);
+  }, [currentIndex, texts.length]);
+
  return(
     <div className="home">
         {floatingBtn ? (<FloatingButton isShow={floatingBtn}/>):<></>
         }
         <Intro/>
-        <marquee style={{background:'#FCA311',color:'whitesmoke'}}>--Welcome to Robotics UNP Website--</marquee>
+        {/* <marquee style={{background:'#FCA311',color:'whitesmoke'}}>--Welcome to Robotics UNP Website--</marquee> */}
+        <div className="marquee">
+        {texts.map((text, index) => (
+        <span
+          key={index}
+          className={index === currentIndex ? 'visible' : 'hidden'}
+        >
+          {text}
+        </span>
+      ))}
+    </div>
         <div data-aos="fade-up" ><NewsSection/></div>
         <div data-aos="fade-up" className="aboutSection">
         <Container className="fluid d-md-flex justify-content-center">

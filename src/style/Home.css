@@ -3,6 +3,42 @@
     background-color: whitesmoke;
 }
 /*https://coolors.co/palette/000000-14213d-fca311-e5e5e5-ffffff*/
+
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background:#FCA311;
+    color:whitesmoke;
+    text-align: left;
+  }
+  
+  span {
+    width: 100%;
+    font-size: 16px;
+    animation: marquee 15s linear infinite;
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-20%);
+    }
+  }
+  
+  span.visible {
+    display: inline-block;
+    animation-play-state: running;
+  }
+  
+  span.hidden {
+    display: none;
+    animation-play-state: paused;
+  }
+
+
 .aboutSection{
     margin-top: 20px;
     background-color: #e5e5e5;
