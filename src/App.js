@@ -9,6 +9,7 @@ import KRTI from './Pages/KRTI';
 import Sponsors from './Pages/Sponsors';
 import Galery from './Pages/Galery';
 import News from './Pages/News';
+import NewsArticle from './Pages/NewsArticle';
 function App() {
   return (
       <Router>
@@ -22,7 +23,9 @@ function App() {
           <Route path='/KRTI' element={<KRTI/>}/>
           <Route path='/sponsors' element={<Sponsors/>}/>
           <Route path='/gallery' element={<Galery/>}/>
-          <Route path='/news' element={<News/>}/>
+          <Route path='/news/:id' element={<NewsArticle/>}/>
+          <Route path='/news/all' element={<News/>}/>
+          
         </Routes>
       </Router>
   );

@@ -15,11 +15,10 @@ const Home = () =>{
         Aos.init({duration:2000});
     },[])
 
-    const [dayLeft, setDayLeft] = useState(0);
     const [texts, setTexts] = useState(['--Welcome to Robotics UNP Website--', 
     "--Let's Get Creative with Technology--",
     new Date().toLocaleString('id-ID', { timeZone: 'Asia/Jakarta', hour12: false}),
-    `H-${dayLeft} Kontes Robot Indonesia Wilayah I 2023` 
+    'H-0 Kontes Robot Indonesia Wilayah I 2023'
     ]);
     
     useEffect(() => {
@@ -29,8 +28,7 @@ const Home = () =>{
           const now = new Date().getTime();
           const distance = countDownDate - now;
           const daysLeft = Math.ceil(distance / (1000 * 60 * 60 * 24));
-          setDayLeft(daysLeft);
-          setTexts(prevTexts => [prevTexts[0], prevTexts[1], newTime, `H-${dayLeft} Kontes Robot Indonesia Wilayah I 2023` ]);
+          setTexts(prevTexts => [prevTexts[0], prevTexts[1], newTime, `H-${daysLeft} Kontes Robot Indonesia Wilayah I 2023` ]);
         }, 1000);
         return () => clearInterval(intervalId);
       }, []);
@@ -38,7 +36,7 @@ const Home = () =>{
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
-    const intervalId = setInterval(() => {
+        const intervalId = setInterval(() => {
       const nextIndex = (currentIndex + 1) % texts.length;
       setCurrentIndex(nextIndex);
     }, 15000);
