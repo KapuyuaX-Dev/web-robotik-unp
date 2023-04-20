@@ -1,5 +1,4 @@
 .home{
-    padding-top: 70px;
     background-color: whitesmoke;
 }
 /*https://coolors.co/palette/000000-14213d-fca311-e5e5e5-ffffff*/
@@ -289,6 +288,9 @@
 }
 
 @media only screen and (max-width:500px) {
+    .home{
+        padding-top: 60px;
+    }
     .pengurus .president{
         margin-top: 30px;
         margin-left: 0px;

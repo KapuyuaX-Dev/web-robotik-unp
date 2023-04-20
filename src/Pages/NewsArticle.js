@@ -8,7 +8,7 @@ function NewsArticle() {
     const [news, setNews] = useState([
         {
           id :0,
-          title:'Oprec 2023',
+          title:'News Title',
           date: '29/03/2023, 21:07 WIB',
           text: "Some quick example text to build on the card title and make up the bulk of the card's content"
         },

@@ -11,7 +11,7 @@
 }
 
 .transparentNav{
-    background-color: rgba(0,0,0, 0.12)
+    background-color: rgba(0,0,0, 0.2);
 }
 
 .nav-links:hover{
@@ -21,4 +21,10 @@
 .active{
     color: #FCA311;
     text-decoration: none;
+}
+
+@media only screen and (max-width:500px) {
+    .transparentNav{
+        background-color: #14213d;
+    }
 }
