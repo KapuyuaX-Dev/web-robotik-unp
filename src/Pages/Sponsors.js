@@ -1,9 +1,14 @@
 import React from 'react'
+import { NavigationBar } from '../components/PageNavbar';
 import Construction from '../components/Construction';
+
 function Sponsors() {
   return (
     <div>
-      <Construction/>
+        <NavigationBar/>
+      <section className='m-5'>
+        <Construction/>
+      </section>
     </div>
   )
 }

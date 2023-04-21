@@ -13,40 +13,39 @@ function NewsSection() {
 },[])
   const navigate = useNavigate()
   const [news, setNews] = useState([
-  {
-    id :0,
-    title:'News Title',
-    date: '29/03/2023, 21:07 WIB',
-    text: "Some quick example text to build on the card title and make up the bulk of the card's content"
-  },
-  {
-    id :1,
-    title:'News Title',
-    date: '31/03/2023, 21:07 WIB',
-    text: "Some quick example text to build on the card title and make up the bulk of the card's content"
-  }
-  ,
-  {
-    id :2,
-    title:'News Title',
-    date: '31/03/2023, 21:07 WIB',
-    text: "Some quick example text to build on the card title and make up the bulk of the card's content"
-  },
-  {
-    id :3,
-    title:'News Title',
-    date: '31/03/2023, 21:07 WIB',
-    text: "Some quick example text to build on the card title and make up the bulk of the card's content"
-  }
-  ,
-  {
-    id :4,
-    title:'News Title',
-    date: '31/03/2023, 21:07 WIB',
-    text: "Some quick example text to build on the card title and make up the bulk of the card's content"
-  }
-  
-  ])
+        {
+          id :0,
+          title:'News Title',
+          date: '29/03/2023, 21:07 WIB',
+          text: "This Section Under Development"
+        },
+        {
+          id :1,
+          title:'News Title',
+          date: '31/03/2023, 21:07 WIB',
+          text: "This Section Under Development"
+        }
+        ,
+        {
+          id :2,
+          title:'News Title',
+          date: '31/03/2023, 21:07 WIB',
+          text: "This Section Under Development"
+        },
+        {
+          id :3,
+          title:'News Title',
+          date: '31/03/2023, 21:07 WIB',
+          text: "This Section Under Development"
+        }
+        ,
+        {
+          id :4,
+          title:'News Title',
+          date: '31/03/2023, 21:07 WIB',
+          text: "This Section Under Development"
+        }
+        ])
 
   return (
     <div className='news'>

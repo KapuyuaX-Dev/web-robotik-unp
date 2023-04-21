@@ -1,9 +1,10 @@
 import { Navbar, Container, Nav } from "react-bootstrap"
 import { Link } from "react-scroll";
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { useState } from "react";
 
 const NavigationBar = () => {
+    const navigate = useNavigate()
     const [color,setColor] = useState(false)
 
     const changeColor = () =>{
@@ -19,7 +20,7 @@ const NavigationBar = () => {
         <div className="header">
                     <Navbar collapseOnSelect variant='dark' fixed="top" expand='md' className={color ? 'colorNav':'transparentNav'}>
                     <Container fluid>
-                    <Navbar.Brand href="/#"><img 
+                    <Navbar.Brand href="/"><img 
                         src={process.env.PUBLIC_URL+'/image/robotik.png'} 
                         alt="logo"
                         height="40"
@@ -33,8 +34,8 @@ const NavigationBar = () => {
                                 <Nav.Link className="nav-links" ><Link to="home" activeClass="active" spy={true} smooth={true} offset={-50} duration={100}>Home</Link></Nav.Link>
                                 <Nav.Link className="nav-links"><Link to="teams" activeClass="active" spy={true} smooth={true} offset={-50} duration={100}>Teams</Link></Nav.Link>
                                 <Nav.Link className="nav-links"><Link to="achievement" activeClass="active" spy={true} smooth={true} offset={-50} duration={100}>Achievement</Link></Nav.Link>
-                                <Nav.Link className="nav-links"><Link to="galery" activeClass="active" spy={true} smooth={true} offset={-50} duration={100}>Galery</Link></Nav.Link>
-                                <Nav.Link className="nav-links"><NavLink style={{textDecoration: 'none',color:"#ffffff8c"}} to="/sponsors" >Sponsors</NavLink></Nav.Link>
+                                <Nav.Link className="nav-links"><Link to="galery" activeClass="active" spy={true} smooth={true} offset={-50} duration={100}>Gallery</Link></Nav.Link>
+                                <Nav.Link className="nav-links" onClick={()=>navigate("/sponsors")}>Sponsors</Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>

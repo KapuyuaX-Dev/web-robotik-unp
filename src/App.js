@@ -4,12 +4,13 @@ import KRSBI from './Pages/KRSBI';
 import KRSTI from './Pages/KRSTI';
 import KRSRI from './Pages/KRSRI';
 import KRTMI from './Pages/KRTMI';
-import {HashRouter as Router, Route, Routes} from "react-router-dom"
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom"
 import KRTI from './Pages/KRTI';
 import Sponsors from './Pages/Sponsors';
 import Galery from './Pages/Galery';
 import News from './Pages/News';
 import NewsArticle from './Pages/NewsArticle';
+import NotFound from './Pages/NotFound';
 function App() {
   return (
       <Router>
@@ -25,6 +26,7 @@ function App() {
           <Route path='/gallery' element={<Galery/>}/>
           <Route path='/news/:id' element={<NewsArticle/>}/>
           <Route path='/news/all' element={<News/>}/>
+          <Route path='*' element={<NotFound/>}/>
           
         </Routes>
       </Router>
