@@ -11,6 +11,8 @@ import Galery from './Pages/Galery';
 import News from './Pages/News';
 import NewsArticle from './Pages/NewsArticle';
 import NotFound from './Pages/NotFound';
+import { useContext } from 'react';
+
 function App() {
   return (
       <Router>

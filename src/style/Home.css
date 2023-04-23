@@ -38,12 +38,12 @@
   }
 
 
-.aboutSection{
+.home .aboutSection{
     margin-top: 20px;
     background-color: #e5e5e5;
 }
 
-.about{
+.home .about{
     margin-top: 40px;
     background-color: whitesmoke;
     max-width: 900px;
@@ -55,7 +55,7 @@
     margin-bottom: 50px;
 }
 
-.about .about-description{
+.home .about .about-description{
     width: 100%;
     max-width: 900px;
     display: grid;
@@ -64,12 +64,12 @@
     padding-bottom: 50px;
 }
 
-.about .about-description img{
+.home .about .about-description img{
     align-items: center;
     height: 200px;
 }
 
-.about h2{
+.home .about h2{
     letter-spacing: 2px;
     font-weight: bold;
     font-family:sans-serif;
@@ -80,19 +80,19 @@
     border-bottom: 3px solid #FCA311;
 }
 
-.about-description .kiri{
+.home .about-description .kiri{
     padding-left: 80px;
     padding-right: 0px;
     display: flex;
     align-items : center;
 }
 
-.about-description .kanan{
+.home .about-description .kanan{
     margin-top: 40px;
     overflow: hidden;
 }
 
-.about .about-description p{
+.home .about .about-description p{
     text-align: justify;
 }
 
@@ -253,13 +253,13 @@
 }
 
 @media only screen and (max-width:768px) {
-    .about .about-description{
+    .home .about .about-description{
         width: 85%;
         grid-template-columns: 1fr;
         padding-bottom: 20px;
     }
 
-    .about h2{
+    .home .about h2{
         letter-spacing: 2px;
         font-weight: bold;
         font-family:sans-serif;
@@ -271,17 +271,17 @@
         margin-left: 190px;
     }
 
-    .about .about-description img{
+    .home .about .about-description img{
         align-items: center;
         height: 200px;
         margin-left: 80px;
         margin-top: 25px;
     }
-    .about-description .kiri{
-        margin-left: 12%;
+    .home .about-description .kiri{
+        margin: 10px auto;
     }
     
-    .about-description .kanan{
+    .home .about-description .kanan{
        margin-left: 12%;
     }
     
@@ -296,13 +296,13 @@
         margin-left: 0px;
     }
 
-    .about .about-description{
+    .home .about .about-description{
         width: 85%;
         grid-template-columns: 1fr;
         padding-bottom: 20px;
     }
 
-    .about h2{
+    .home .about h2{
         letter-spacing: 2px;
         font-weight: bold;
         font-family:sans-serif;
@@ -313,16 +313,15 @@
         margin: 30px auto;
     }
 
-    .about .about-description img{
-        align-items: center;
+    .home .about .about-description img{
         height: 200px;
-        margin-left: 25px;
+        margin:10px auto;
     }
     .about-description .kiri{
         margin: 25px auto;
     }
     
-    .about-description .kanan{
+    .home .about-description .kanan{
        margin-left: 12%;
     }
 

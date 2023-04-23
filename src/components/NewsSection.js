@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Button, Card, Container } from 'react-bootstrap'
 import '../style/News.css'
 
@@ -6,47 +6,14 @@ import Aos from "aos";
 import "aos/dist/aos.css"
 import { useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
+import {NewsContext} from '../Context';
 
 function NewsSection() {
   useEffect(()=>{
     Aos.init({duration:2000});
 },[])
   const navigate = useNavigate()
-  const [news, setNews] = useState([
-        {
-          id :0,
-          title:'News Title',
-          date: '29/03/2023, 21:07 WIB',
-          text: "This Section Under Development"
-        },
-        {
-          id :1,
-          title:'News Title',
-          date: '31/03/2023, 21:07 WIB',
-          text: "This Section Under Development"
-        }
-        ,
-        {
-          id :2,
-          title:'News Title',
-          date: '31/03/2023, 21:07 WIB',
-          text: "This Section Under Development"
-        },
-        {
-          id :3,
-          title:'News Title',
-          date: '31/03/2023, 21:07 WIB',
-          text: "This Section Under Development"
-        }
-        ,
-        {
-          id :4,
-          title:'News Title',
-          date: '31/03/2023, 21:07 WIB',
-          text: "This Section Under Development"
-        }
-        ])
-
+  const {news,setNews} = useContext(NewsContext)
   return (
     <div className='news'>
         <Container>

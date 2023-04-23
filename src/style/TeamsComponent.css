@@ -1,0 +1,136 @@
+.banner img{
+    width: 100%;
+    background-size: cover;
+}
+
+.aboutSection{
+    padding-top: 30px;
+    background-color: #e5e5e5;
+}
+
+.aboutTeam{
+    background-color: whitesmoke;
+    max-width: 900px;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    border: 2px solid white;
+    box-shadow: 0px 6px 11px 0px rgba(0, 0, 0, 0.8); 
+    margin-bottom: 50px;
+}
+
+.aboutTeam .about-description{
+    width: 100%;
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.aboutTeam .about-description img{
+    align-items: center;
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    animation: bounce 2s ease infinite;
+}
+
+.aboutTeam h3{
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-family:sans-serif;
+    margin-top: -20px;
+    margin-left: 60%;
+    padding: 0px 10px;
+    width: 300px;
+    border-bottom: 3px solid #FCA311;
+}
+
+.aboutTeam .about-description .kiri{
+    padding-left: 80px;
+    padding-right: 0px;
+    display: flex;
+    align-items : center;
+}
+
+.aboutTeam .about-description .kanan{
+    margin-top: 40px;
+    overflow: hidden;
+}
+
+.aboutTeam .about-description p{
+    text-align: justify;
+}
+
+@media only screen and (max-width:768px) {
+    .aboutTeam .about-description{
+        width: 85%;
+        grid-template-columns: 1fr;
+        padding-bottom: 20px;
+    }
+
+    .aboutTeamt h3{
+        letter-spacing: 2px;
+        font-weight: bold;
+        font-family:sans-serif;
+        padding: 0px 10px;
+        width: 300px;
+        border-bottom: none;
+        align-items: center;
+        margin: 40px auto;
+    }
+
+    .aboutTeam .about-description img{
+        align-items: center;
+        height: 200px;
+        margin: 10px auto;
+    }
+
+    .aboutTeam .about-description .kiri{
+        margin: 20px auto;
+    }
+    
+    .aboutTeam .about-description .kanan{
+       margin-left: 12%;
+    }
+    
+}
+
+@media only screen and (max-width:500px) {
+    .aboutTeam .about-description{
+        width: 85%;
+        grid-template-columns: 1fr;
+        padding-bottom: 20px;
+    }
+
+    .aboutTeam h3{
+        letter-spacing: 2px;
+        font-weight: bold;
+        font-family:sans-serif;
+        padding: 0px 10px;
+        width: 300px;
+        border-bottom: none;
+        text-align: center;
+        margin: 30px auto;
+    }
+
+    .aboutTeam .about-description img{
+        align-items: center;
+        height: 200px;
+        margin: 5px auto;
+    }
+    .aboutTeam .about-description .kiri{
+        margin: 25px auto;
+    }
+    
+    .aboutTeam .about-description .kanan{
+       margin-left: 12%;
+    }
+}
+
+@keyframes bounce{
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-20px);}
+	60% {transform: translateY(-10px);}
+}

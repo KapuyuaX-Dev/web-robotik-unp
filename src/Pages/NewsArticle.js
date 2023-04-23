@@ -1,49 +1,34 @@
-import React, { useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Construction from '../components/Construction';
 import { useParams } from 'react-router-dom';
 import { NavigationBar } from '../components/PageNavbar';
 import { Container } from 'react-bootstrap';
+import { Ring } from 'react-awesome-spinners';
+import { NewsContext } from '../Context';
+
 function NewsArticle() {
     const {id} = useParams();
     console.log(id)
-    const [news, setNews] = useState([
-        {
-          id :0,
-          title:'News Title',
-          date: '29/03/2023, 21:07 WIB',
-          text: "This Section Under Development"
-        },
-        {
-          id :1,
-          title:'News Title',
-          date: '31/03/2023, 21:07 WIB',
-          text: "This Section Under Development"
-        }
-        ,
-        {
-          id :2,
-          title:'News Title',
-          date: '31/03/2023, 21:07 WIB',
-          text: "This Section Under Development"
-        },
-        {
-          id :3,
-          title:'News Title',
-          date: '31/03/2023, 21:07 WIB',
-          text: "This Section Under Development"
-        }
-        ,
-        {
-          id :4,
-          title:'News Title',
-          date: '31/03/2023, 21:07 WIB',
-          text: "This Section Under Development"
-        }
-        
-        ])
-    
+    const {news, setNews} = useContext(NewsContext)
     const article = news.find(article => article.id === parseInt(id));
     document.title = "Robotik UNP";
+    
+    const [loading, setLoading] = useState(true);
+    useEffect(() => {
+      const timer = setTimeout(() => {
+      setLoading(false);
+      }, 200);
+      return () => clearTimeout(timer);
+    }, []);
+
+    if(loading){
+      return(
+          <div className='d-flex flex-column align-items-center justify-content-center my-5'>
+            <Ring/>
+            <h3>Loading</h3>
+          </div>
+      )
+    }
     return (
       <div>
         <NavigationBar/>

@@ -58,7 +58,7 @@ const Home = () =>{
           {text}
         </span>
       ))}
-    </div>
+        </div>
         <div data-aos="fade-up" ><NewsSection/></div>
         <div data-aos="fade-up" className="aboutSection">
         <Container className="fluid d-md-flex justify-content-center">
