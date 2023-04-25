@@ -13,14 +13,15 @@ function NewsSection() {
     Aos.init({duration:2000});
 },[])
   const navigate = useNavigate()
-  const {news,setNews} = useContext(NewsContext)
+  const {news} = useContext(NewsContext)
+  const displayedNews = news.slice(-5).reverse()
   return (
     <div className='news'>
         <Container>
            <h2>NEWS</h2>
            <div className='d-lg-flex justify-items-center news-item align-content-center'>
             {
-              news.map((news,i)=>(
+              displayedNews.map((news,i)=>(
                 <Card data-aos="fade-up" key={i}>
                   
                   <Card.Body>

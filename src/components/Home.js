@@ -5,11 +5,15 @@ import NewsSection from "./NewsSection";
 import Intro from "./Intro";
 import Aos from "aos";
 import "aos/dist/aos.css"
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import FloatingButton from './FloatingButton'
+import { AboutContext } from "../Context";
 
 const Home = () =>{
     document.title = "Robotik UNP";
+
+    const {about} = useContext(AboutContext)
+
     const [floatingBtn,setFloatinBtn] = useState(false)
     useEffect(()=>{
         Aos.init({duration:2000});
@@ -65,9 +69,8 @@ const Home = () =>{
             <div className="about">
                 <h2>About us</h2>
                         <Row className="about-description">
-                            <div className="kiri"><img src={process.env.PUBLIC_URL+'/image/robotik.png'} alt='logo'></img></div>
-                            <div className="kanan"><p>Universitas Negeri Padang's Robotics Club, or often known as <b>ROBOTIK UNP</b> is a student activity club that accommodates students who have a strong passion for robotics engineering. ROBOTIK UNP was established on September 10th, 2008 under the name <b>Gaza Robotics Team</b>. The name <b>'Gaza'</b> was taken from the fighting spirit of Gaza, who never gives up easily. The Gaza Robotics Team was under the auspices of the Universitas Negeri Padang's Faculty of Engineering, which in 2018 became an official student activity club. As time went by, we decided to change the name from Gaza Robotics Team to the ROBOTIK UNP.</p>
-                            </div>
+                            <div className="kiri"><img src={process.env.PUBLIC_URL+about.image} alt='logo'></img></div>
+                            <div className="kanan"><div dangerouslySetInnerHTML={ {__html:about.about}}/></div>
                         </Row> 
             </div>       
         </Container>
@@ -85,7 +88,6 @@ const Home = () =>{
                 <h2>Vision</h2>
                     <div className="vision-description d-flex">
                     <center><h5>"Becoming one of the student activity club that accommodates the entire academic community of Universitas Negeri Padang in the field of robotics engineering technology research that is advanced, accomplished, superior and dignified in Asia"</h5></center>
- 
                     </div>
             </div>       
         </Container>

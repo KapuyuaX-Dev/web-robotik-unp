@@ -126,7 +126,7 @@ const eventKRTITrigger = e =>{
         <Container data-aos="fade-up" className='d-md-flex flex-wrap justify-content-center align-items-center'>
           <Card className='d-flex text-center align-items-center mt-4'>
             <h5 className='m-3 fontSize-1'>Kontes Robot Indonesia</h5>
-            <img className='m-2' src='https://pusatprestasinasional.kemdikbud.go.id/uploads/event/y35PavpUxmU9BjQhg3nxnWD6K750ebKaB0vMO7Vu.png'/>
+            <img className='m-2' src={process.env.PUBLIC_URL+'/image/KRILogo.png'}/>
             <div className='d-flex text-center flex-wrap justify-content-evenly align-items-center'>
              <Form>
             {achievement.map((achievement,i)=>(
@@ -163,7 +163,7 @@ const eventKRTITrigger = e =>{
         <Container data-aos="fade-up" className='d-md-flex flex-wrap justify-content-center align-items-center'>
           <Card className='d-flex text-center align-items-center mt-4'>
             <h5 className='m-3 fontSize-1'>Kontes Robot Terbang Indonesia</h5>
-            <img className='m-2' src='https://pusatprestasinasional.kemdikbud.go.id/uploads/event/kDiotgDS94XN6Nz1UQ6hYIz0L9G6Y2eQ81VYxSgh.png'/>
+            <img className='m-2' src={process.env.PUBLIC_URL+'/image/KRTILogo.png'}/>
             <div className='d-flex text-center flex-wrap justify-content-evenly align-items-center'>
               <Form>
              {

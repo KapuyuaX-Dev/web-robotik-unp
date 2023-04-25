@@ -5,11 +5,14 @@ import { NavigationBar } from '../components/PageNavbar';
 import { Container } from 'react-bootstrap';
 import { Ring } from 'react-awesome-spinners';
 import { NewsContext } from '../Context';
+import { NewsContent } from '../components/NewsComponent';
+import Footer from '../components/Footer';
+
 
 function NewsArticle() {
     const {id} = useParams();
-    console.log(id)
-    const {news, setNews} = useContext(NewsContext)
+    const {news} = useContext(NewsContext)
+    const displayedNews = news.slice(-5).reverse()
     const article = news.find(article => article.id === parseInt(id));
     document.title = "Robotik UNP";
     
@@ -32,12 +35,12 @@ function NewsArticle() {
     return (
       <div>
         <NavigationBar/>
-      <section className='m-lg--5 my-5'>
+      <section className='m-lg--5 bg-secondary bg-gradient'>
         <Container>
-          <Construction/>
-          <h3 className='text-center mt-3'>News ID : {article.id}</h3>
+          <NewsContent id={article.id} description={article.text} title={article.title} date={article.date} article={article.article} imagePath={article.image} news={displayedNews}/>
         </Container>
       </section>
+      <Footer/>
     </div>
     )
 }

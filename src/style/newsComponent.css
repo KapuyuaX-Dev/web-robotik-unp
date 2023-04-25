@@ -1,0 +1,36 @@
+.newsContent{
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: 0.7fr 0.3fr;
+    background-color: white;
+}
+
+.newsContent h6{
+    color: gray;
+}
+
+.newsContent img{
+    max-width: 800px;
+    width: 100%;
+    background-size: cover;
+    margin: 5px auto;
+}
+
+.newsContent .LeftSide{
+    margin:10px 50px auto 25px;
+}
+
+.newsContent .news-article{
+    text-align: justify;
+    text-indent: 1.5cm;
+}
+
+@media only screen and (max-width:768px) {
+    .newsContent{
+        grid-template-columns: 1fr;
+    }
+
+    .newsContent .news-article{
+        text-indent: 1cm;
+    }
+}
