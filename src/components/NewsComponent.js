@@ -1,5 +1,5 @@
-import React from "react"
-import { Container } from "react-bootstrap"
+import React, { useState } from "react"
+import { Container, Form } from "react-bootstrap"
 import '../style/newsComponent.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClock } from '@fortawesome/free-regular-svg-icons'
@@ -53,6 +53,7 @@ export function NewsContent({id,title,description,date,imagePath,article, news})
     const displayedNews = news.slice(-5).reverse()
     const navigate = useNavigate()
     console.log(news.length-1)
+
     return(
         <div>
             <Container className="newsContent mt-5">
@@ -65,12 +66,12 @@ export function NewsContent({id,title,description,date,imagePath,article, news})
                     <NewsBanner imagePath={imagePath}/>
                     <div className="news-article mt-3" dangerouslySetInnerHTML={ {__html:article}}/>
                     <div className="navigation d-flex justify-content-between mt-3">
-                        <div className="next" onClick={(id+1>news.length-1)? '':()=>navigate(`/news/${id+1}`)}>
+                        <div className="next" onClick={(id+1>news.length-1)? ()=>navigate(`/news/${id}`):()=>navigate(`/news/${id+1}`)}>
                             <div className="mx-3 mt-1 fs-6 fw-bold">Next</div>
                             <div className="navTitle mx-3">{(id+1>news.length-1)? '':news[id+1].title}</div>
                             
                         </div>
-                        <div className="prev" onClick={(id-1<0)? '':()=>navigate(`/news/${id-1}`)}>
+                        <div className="prev" onClick={(id-1<0)? ()=>navigate(`/news/${id}`):()=>navigate(`/news/${id-1}`)}>
                             <div className="mx-3 mt-1 fs-6 fw-bold">Previous</div>
                             <div className="navTitle mx-3">{(id-1<0)? '':news[id-1].title}</div>
                         </div>
@@ -112,23 +113,37 @@ function NewsCard({item}){
 
 export function NewsPageComponent({news}){
     const newsReversed = news.slice(0).reverse().map(element => {return element;});
+    const [searchTerm, setSearchTerm] = useState('');
+    const handleSearchInputChanges = (e) => {
+        setSearchTerm(e.target.value);
+      };
+
+    const filteredNews = newsReversed.filter((item) => {
+        return item.title.toLowerCase().includes(searchTerm.toLowerCase());
+      });
+      
     return(
         <div> 
             <Container className="mt-5 pt-3"> 
-            <div className="head bg-primary">a</div>
+            <div className="head bg-primary">news banner</div>
             <Container className="newsContent">
                 <div className="LeftSide mb-4">
-                <div className="d-flex">
-                <h5 className="mt-3">Recent Post</h5>
+                <div className="d-flex justify-content-between align-items-start">
+                <h5>Recent Post</h5>
+                <Form>
+                    <Form.Group className="mb-3" controlId="seacrch bar">
+                        <Form.Control type="search" placeholder="Search" value={searchTerm}onChange={handleSearchInputChanges}/>
+                    </Form.Group>
+                </Form>
                 </div>
                 {
-                    newsReversed.map((news,i)=>(
+                    filteredNews.map((news,i)=>(
                         <NewsCard item={news}/>
                     ))
                 }
                 </div>
                 <div className="RightSide mt-5">
-                    <Calendar className='my-5'/>
+                    <Calendar className='my-1'/>
                 </div>
             </Container>
             </Container>
