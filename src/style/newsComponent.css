@@ -1,5 +1,5 @@
 .newsContent{
-    padding-top: 20px;
+    padding-top: 10px;
     display: grid;
     grid-template-columns: 1fr 0.3fr;
     background-color: white;
@@ -9,11 +9,40 @@
     color: gray;
 }
 
-.newsContent img{
+.newsContent .newsBanner img{
     max-width: 800px;
     width: 100%;
-    background-size: cover;
+    object-fit: cover;
     margin: 5px auto;
+}
+
+.newsContent .LeftSide .newsCard{
+    height: 80px;
+}
+
+.newsContent .LeftSide .newsCard .title{
+    font-size: 20px;
+}
+
+.newsContent .LeftSide .newsCard .date{
+    font-size: 12px;
+}
+
+.newsContent .LeftSide .newsCard .desc{
+    max-width: 700px;
+    overflow: hidden;
+    padding: 5px;
+    min-width: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 16px;
+}
+
+.newsContent .LeftSide .newsCard img{
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    object-fit: cover;
 }
 
 .newsContent .LeftSide{
@@ -47,9 +76,29 @@
 }
 
 .RightSide h5{
+    color: #14213d;
     font-size:26px;
     width: 170px;
     border-bottom: 3px solid #FCA311;
+}
+
+.LeftSide h5{
+    color: #14213d;
+    font-size:28px;
+    width: 180px;
+    border-bottom: 3px solid #FCA311;
+}
+
+@media only screen and (max-width:1200px) {
+    .newsContent .LeftSide .newsCard .desc{
+        max-width: 500px;
+    }
+}
+
+@media only screen and (max-width:993px) {
+    .newsContent .LeftSide .newsCard .desc{
+        max-width: 200px;
+    }
 }
 
 @media only screen and (max-width:768px) {

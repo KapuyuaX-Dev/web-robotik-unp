@@ -9,9 +9,9 @@ import Calendar from 'react-calendar';
 import '../style/Calendar.css';
 import { Link, useNavigate } from "react-router-dom"
 
-    function NewsBanner({imagePath}){
+function NewsBanner({imagePath}){
     return(
-        <div className="d-flex">
+        <div className="newsBanner d-flex">
           <img className="mt-3" src={process.env.PUBLIC_URL+imagePath} alt="image"/>
         </div>
     )
@@ -92,6 +92,45 @@ export function NewsContent({id,title,description,date,imagePath,article, news})
                     <Calendar className='my-5'/>
                     
                 </div>
+            </Container>
+        </div>
+    )
+}
+    
+function NewsCard({item}){
+    return(
+        <div className="newsCard b border d-flex justify-content-start align-items-center gap-3">
+            <img src={process.env.PUBLIC_URL+item.image}></img>
+            <div className="d-flex flex-column">
+                <div className="title"><Link to={`/news/${item.id}`} style={{textDecoration:'none',color:'black'}}>{item.title}</Link></div>
+                <div className="date text-muted">{item.date}</div>
+                <div className="desc d-inline-block">{item.text}</div>
+            </div>
+        </div>
+    )
+}
+
+export function NewsPageComponent({news}){
+    const newsReversed = news.slice(0).reverse().map(element => {return element;});
+    return(
+        <div> 
+            <Container className="mt-5 pt-3"> 
+            <div className="head bg-primary">a</div>
+            <Container className="newsContent">
+                <div className="LeftSide mb-4">
+                <div className="d-flex">
+                <h5 className="mt-3">Recent Post</h5>
+                </div>
+                {
+                    newsReversed.map((news,i)=>(
+                        <NewsCard item={news}/>
+                    ))
+                }
+                </div>
+                <div className="RightSide mt-5">
+                    <Calendar className='my-5'/>
+                </div>
+            </Container>
             </Container>
         </div>
     )

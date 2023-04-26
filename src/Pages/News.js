@@ -1,9 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Construction from '../components/Construction';
 import { NavigationBar } from '../components/PageNavbar';
 import { Ring } from 'react-awesome-spinners';
+import Footer from '../components/Footer';
+import { NewsPageComponent } from '../components/NewsComponent';
+import { NewsContext } from '../Context';
+
 function News() {
     document.title = "Robotik UNP";
+    const {news} = useContext(NewsContext)
+
     const [loading, setLoading] = useState(true);
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -23,9 +29,10 @@ function News() {
     return (
       <div>
         <NavigationBar/>
-      <section className='m-5'>
-        <Construction/>
+      <section className='m-lg--5 bg-secondary bg-gradient'>
+        <NewsPageComponent news={news}/>
       </section>
+      <Footer/>
     </div>
     )
 }

@@ -19,6 +19,13 @@
     margin: 20px auto;
 }
 
+.news .news-item .card .card-text{
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .news Button{
     background-color: #14213d;   
 }
