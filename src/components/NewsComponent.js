@@ -4,10 +4,10 @@ import '../style/newsComponent.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClock } from '@fortawesome/free-regular-svg-icons'
 import {FacebookShareButton, FacebookIcon,LineShareButton,LineIcon,
-    LinkedinShareButton,LinkedinIcon,TelegramShareButton,TelegramIcon,WhatsappShareButton,WhatsappIcon,TwitterShareButton,TwitterIcon} from "react-share";
+    TelegramShareButton,TelegramIcon,WhatsappShareButton,WhatsappIcon,TwitterShareButton,TwitterIcon} from "react-share";
 import Calendar from 'react-calendar';
 import '../style/Calendar.css';
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
     function NewsBanner({imagePath}){
     return(
@@ -19,7 +19,8 @@ import { Link } from "react-router-dom"
 
 function ShareButton({description,title,id}){
     return(
-        <div className="d-flex mt-4 justify-content-end gap-2">
+        <div className="d-flex flex-wrap mt-4 justify-content-end gap-2 align-items-center">
+            <div className="fw-bold">SHARE :</div>
                         <FacebookShareButton 
                         url={'http://robotik.pkm.unp.ac.id/news/'+id}
                         quote={description}
@@ -29,12 +30,6 @@ function ShareButton({description,title,id}){
                         url={'http://robotik.pkm.unp.ac.id/news/'+id}
                         title={title}
                         ><TwitterIcon size={32} round /></TwitterShareButton>
-
-                        <LinkedinShareButton
-                        url={'http://robotik.pkm.unp.ac.id/news/'+id}
-                        title={title}
-                        summary={description}
-                        ><LinkedinIcon size={32} round /></LinkedinShareButton>
 
                         <WhatsappShareButton
                         url={'http://robotik.pkm.unp.ac.id/news/'+id}
@@ -55,24 +50,38 @@ function ShareButton({description,title,id}){
 }
 
 export function NewsContent({id,title,description,date,imagePath,article, news}){
+    const displayedNews = news.slice(-5).reverse()
+    const navigate = useNavigate()
+    console.log(news.length-1)
     return(
         <div>
             <Container className="newsContent mt-5">
-                <div className="LeftSide mb-4">
-                    <h2>{title}</h2>
+                <div className="LeftSide mb-4 ">
+                    <h2 id="top">{title}</h2>
                     <div className="d-flex gap-2">
                         <FontAwesomeIcon icon={faClock} style={{color:'#808080'}}/>
                         <h6>{date}</h6>
                     </div>
                     <NewsBanner imagePath={imagePath}/>
                     <div className="news-article mt-3" dangerouslySetInnerHTML={ {__html:article}}/>
+                    <div className="navigation d-flex justify-content-between mt-3">
+                        <div className="next" onClick={(id+1>news.length-1)? '':()=>navigate(`/news/${id+1}`)}>
+                            <div className="mx-3 mt-1 fs-6 fw-bold">Next</div>
+                            <div className="navTitle mx-3">{(id+1>news.length-1)? '':news[id+1].title}</div>
+                            
+                        </div>
+                        <div className="prev" onClick={(id-1<0)? '':()=>navigate(`/news/${id-1}`)}>
+                            <div className="mx-3 mt-1 fs-6 fw-bold">Previous</div>
+                            <div className="navTitle mx-3">{(id-1<0)? '':news[id-1].title}</div>
+                        </div>
+                    </div>
                     <ShareButton id={id} description={description} title={title}/>
                 </div>
                 <div className="RightSide mt-5">
-                    <h5 className="mt-3" style={{fontSize:'24px'}}>Recent Post</h5>
+                    <h5 className="mt-3">Recent Post</h5>
                     <div className="recent-post my-3">
                     {
-                    news.map((news,i)=>(
+                    displayedNews.map((news,i)=>(
                             <div key={i} className="d-flex flex-column mb-3">
                                 <Link to={`/news/${news.id}`} style={{textDecoration:'none'}}>{news.title}</Link>
                                 <div>{news.date}</div>

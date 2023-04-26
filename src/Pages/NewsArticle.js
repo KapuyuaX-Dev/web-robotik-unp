@@ -7,12 +7,12 @@ import { Ring } from 'react-awesome-spinners';
 import { NewsContext } from '../Context';
 import { NewsContent } from '../components/NewsComponent';
 import Footer from '../components/Footer';
+import ScrollToTop from '../components/ScrolltoTop';
 
 
 function NewsArticle() {
     const {id} = useParams();
     const {news} = useContext(NewsContext)
-    const displayedNews = news.slice(-5).reverse()
     const article = news.find(article => article.id === parseInt(id));
     document.title = "Robotik UNP";
     
@@ -37,7 +37,8 @@ function NewsArticle() {
         <NavigationBar/>
       <section className='m-lg--5 bg-secondary bg-gradient'>
         <Container>
-          <NewsContent id={article.id} description={article.text} title={article.title} date={article.date} article={article.article} imagePath={article.image} news={displayedNews}/>
+          <ScrollToTop/>
+          <NewsContent id={article.id} description={article.text} title={article.title} date={article.date} article={article.article} imagePath={article.image} news={news}/>
         </Container>
       </section>
       <Footer/>
