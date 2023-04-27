@@ -12,6 +12,7 @@ import { TypingAnimation } from "./TypingAnimation"
 import OwlCarousel from 'react-owl-carousel'
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
+import ReactPaginate from 'react-paginate';
 
 function NewsBanner({imagePath}){
     return(
@@ -101,18 +102,65 @@ export function NewsContent({id,title,description,date,imagePath,article, news})
         </div>
     )
 }
-    
+
+
 function NewsCard({item}){
     return(
-        <div className="newsCard border-top border-bottom d-flex justify-content-start align-items-center gap-3">
+        <>{
+            item.map((item,i)=>(
+            <div className="newsCard border-top border-bottom d-flex justify-content-start align-items-center gap-3">
             <img src={process.env.PUBLIC_URL+item.image}></img>
             <div className="d-flex flex-column">
                 <div className="title mt-3"><Link to={`/news/${item.id}`} style={{textDecoration:'none',color:'black'}}>{item.title}</Link></div>
                 <div className="date text-muted">{item.date}</div>
                 <div className="desc d-inline-block mb-3">{item.text}</div>
             </div>
-        </div>
+            </div>
+            ))
+        
+        }
+        </>
     )
+}
+
+function PaginatedItems({ itemsPerPage,items }) {
+    const [itemOffset, setItemOffset] = useState(0);
+    const endOffset = itemOffset + itemsPerPage;
+    const currentItems = items.slice(itemOffset, endOffset);
+    const pageCount = Math.ceil(items.length / itemsPerPage);
+    const handlePageClick = (event) => {
+        const newOffset = (event.selected * itemsPerPage) % items.length;
+        console.log(
+          `User requested page number ${event.selected}, which is offset ${newOffset}`
+        );
+        setItemOffset(newOffset);
+      };
+    
+      return (
+        <>
+          <NewsCard item={currentItems} />
+          <div className="d-flex justify-content-center mt-3">
+          <ReactPaginate
+            breakLabel="..."
+            nextLabel=">"
+            onPageChange={handlePageClick}
+            pageRangeDisplayed={5}
+            pageCount={pageCount}
+            previousLabel="<"
+            pageLinkClassName="page-link"
+            previousClassName="page-item"
+            previousLinkClassName="page-link"
+            nextClassName="page-item"
+            nextLinkClassName="page-link"
+            breakClassName="page-item"
+            breakLinkClassName="page-link"
+                containerClassName="pagination"
+            activeClassName="active"
+            renderOnZeroPageCount={null}
+          />
+          </div>
+        </>
+      );
 }
 
 export function NewsPageComponent({news}){
@@ -170,11 +218,7 @@ export function NewsPageComponent({news}){
                     </Form.Group>
                 </Form>
                 </div>
-                {
-                    filteredNews.map((news,i)=>(
-                        <NewsCard item={news}/>
-                    ))
-                }
+                <PaginatedItems itemsPerPage={10} items={filteredNews}/>
                 </div>
                 <div className="RightSide mt-5">
                     <Calendar className='mb-5'/>
