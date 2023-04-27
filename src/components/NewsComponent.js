@@ -8,6 +8,10 @@ import {FacebookShareButton, FacebookIcon,LineShareButton,LineIcon,
 import Calendar from 'react-calendar';
 import '../style/Calendar.css';
 import { Link, useNavigate } from "react-router-dom"
+import { TypingAnimation } from "./TypingAnimation"
+import OwlCarousel from 'react-owl-carousel'
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 function NewsBanner({imagePath}){
     return(
@@ -100,18 +104,19 @@ export function NewsContent({id,title,description,date,imagePath,article, news})
     
 function NewsCard({item}){
     return(
-        <div className="newsCard b border d-flex justify-content-start align-items-center gap-3">
+        <div className="newsCard border-top border-bottom d-flex justify-content-start align-items-center gap-3">
             <img src={process.env.PUBLIC_URL+item.image}></img>
             <div className="d-flex flex-column">
-                <div className="title"><Link to={`/news/${item.id}`} style={{textDecoration:'none',color:'black'}}>{item.title}</Link></div>
+                <div className="title mt-3"><Link to={`/news/${item.id}`} style={{textDecoration:'none',color:'black'}}>{item.title}</Link></div>
                 <div className="date text-muted">{item.date}</div>
-                <div className="desc d-inline-block">{item.text}</div>
+                <div className="desc d-inline-block mb-3">{item.text}</div>
             </div>
         </div>
     )
 }
 
 export function NewsPageComponent({news}){
+    const navigate = useNavigate()
     const newsReversed = news.slice(0).reverse().map(element => {return element;});
     const [searchTerm, setSearchTerm] = useState('');
     const handleSearchInputChanges = (e) => {
@@ -121,14 +126,43 @@ export function NewsPageComponent({news}){
     const filteredNews = newsReversed.filter((item) => {
         return item.title.toLowerCase().includes(searchTerm.toLowerCase());
       });
-      
+    
+    const titles = news.slice(-3).reverse().map((item) => {
+        return(item.title)
+      });
+    
+    const carouselItems = news.slice(-3).reverse().map((item) => {
+        return{
+            id:item.id,
+            title:item.title,
+            image:item.image
+        }
+    });
     return(
         <div> 
             <Container className="mt-5 pt-3"> 
-            <div className="head bg-primary">news banner</div>
+            <div className="head ">
+                <OwlCarousel className='owl-theme'
+                loop   
+                items={1}
+                autoplay={true} 
+                autoplayTimeout={5000}
+                autoplayHoverPause={true}
+                >
+                    {
+                     carouselItems.map((item,i)=>(
+                    <div key={i} className="d-flex carousel-items">
+                        <img key={i} src={process.env.PUBLIC_URL+item.image}/>
+                        <div className="title" onClick={()=>navigate(`/news/${item.id}`)}>{item.title}</div>
+                     </div>
+                     ))
+                    }
+                </OwlCarousel>
+            </div>
+            <TypingAnimation texts={titles}/>
             <Container className="newsContent">
                 <div className="LeftSide mb-4">
-                <div className="d-flex justify-content-between align-items-start">
+                <div className="d-md-flex justify-content-between align-items-start">
                 <h5>Recent Post</h5>
                 <Form>
                     <Form.Group className="mb-3" controlId="seacrch bar">
@@ -143,7 +177,7 @@ export function NewsPageComponent({news}){
                 }
                 </div>
                 <div className="RightSide mt-5">
-                    <Calendar className='my-1'/>
+                    <Calendar className='mb-5'/>
                 </div>
             </Container>
             </Container>
