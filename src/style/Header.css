@@ -1,30 +1,29 @@
-.header{
-    height: 9vh;
-    position: fixed;
-    width: 100%;
-    z-index: 999;
+.header {
+  height: 9vh;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
 }
 
-.colorNav{
+.colorNav {
+  background-color: #14213d;
+}
+
+.transparentNav {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.nav-links:hover {
+  background-color: #fca311;
+}
+
+.active {
+  color: #fca311;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 500px) {
+  .transparentNav {
     background-color: #14213d;
-    
-}
-
-.transparentNav{
-    background-color: rgba(0,0,0, 0.2);
-}
-
-.nav-links:hover{
-    background-color: #FCA311;
-}
-
-.active{
-    color: #FCA311;
-    text-decoration: none;
-}
-
-@media only screen and (max-width:500px) {
-    .transparentNav{
-        background-color: #14213d;
-    }
+  }
 }

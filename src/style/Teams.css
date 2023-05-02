@@ -1,26 +1,30 @@
-.teams{
-    background-color: #e5e5e5;
+.teams {
+  background-color: #e5e5e5;
 }
 
-.teams h2{
-    padding-top: 30px;
-    margin-bottom: 30px;
-    width: 130px;
-    color: #14213d;
-    border-bottom: 3px solid #FCA311;
+.teams h2 {
+  padding-top: 30px;
+  margin-bottom: 30px;
+  width: 130px;
+  color: #14213d;
+  border-bottom: 3px solid #fca311;
 }
 
-.teams img{
-    width: 180px;
-    height: 180px;
-    object-fit: contain;
+.teams img {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
 }
 
-.teams img:hover{
-    transform: scale(1.2);
-    opacity: 80%;
+.teams .team-image:hover {
+  transform: scale(1.2);
+  opacity: 80%;
 }
 
-.teams .logo{
-    gap: 100px;
+.teams .logo {
+  gap: 100px;
+}
+
+.teams h3 {
+  color: rgba(0, 0, 0, 0.7);
 }
