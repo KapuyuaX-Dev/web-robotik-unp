@@ -31,12 +31,15 @@ export function NavigationBar() {
               <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="/news/all">News</Nav.Link>
               <NavDropdown title="Teams" id="responsive-navbar-nav">
-                <NavDropdown.Item href="/krai">KRAI</NavDropdown.Item>
-                <NavDropdown.Item href="/krsbi">KRSBI</NavDropdown.Item>
-                <NavDropdown.Item href="/krsti">KRSTI</NavDropdown.Item>
-                <NavDropdown.Item href="/krsri">KRSRI</NavDropdown.Item>
-                <NavDropdown.Item href="/krtmi">KRTMI</NavDropdown.Item>
-                <NavDropdown.Item href="/krti">KRTI</NavDropdown.Item>
+                <NavDropdown.Item href="/Teams/krai">KRAI</NavDropdown.Item>
+                <NavDropdown.Item href="/Teams/krsbi">KRSBI</NavDropdown.Item>
+                <NavDropdown.Item href="/Teams/krsti">KRSTI</NavDropdown.Item>
+                <NavDropdown.Item href="/Teams/krsri">KRSRI</NavDropdown.Item>
+                <NavDropdown.Item href="/Teams/krtmi">KRTMI</NavDropdown.Item>
+                <NavDropdown.Item href="/Teams/rp">
+                  Racing Plane
+                </NavDropdown.Item>
+                <NavDropdown.Item href="/Teams/vtol">VTOL</NavDropdown.Item>
               </NavDropdown>
               <Nav.Link href="/gallery">Gallery</Nav.Link>
               <Nav.Link href="/sponsors">Sponsors</Nav.Link>

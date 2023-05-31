@@ -18,7 +18,7 @@ function Teams() {
         <Container className="d-md-flex justify-content-center align-items-center flex-wrap text-center logo">
           <div data-aos="fade-up">
             <div className="team-image d-flex flex-column">
-              <Link to="/KRAI">
+              <Link to="/Teams/KRAI">
                 <img src={process.env.PUBLIC_URL + "/image/krai.png"}></img>
               </Link>
               <h3 className="mt-3">Do'a Mande</h3>
@@ -26,7 +26,7 @@ function Teams() {
           </div>
           <div data-aos="fade-up">
             <div className="team-image d-flex flex-column">
-              <Link to="/KRSBI">
+              <Link to="/Teams/KRSBI">
                 <img src={process.env.PUBLIC_URL + "/image/krsbi.png"}></img>
               </Link>
               <h3 className="mt-3">Al-Fath</h3>
@@ -34,7 +34,7 @@ function Teams() {
           </div>
           <div data-aos="fade-up">
             <div className="team-image d-flex flex-column">
-              <Link to="/KRSTI">
+              <Link to="/Teams/KRSTI">
                 <img src={process.env.PUBLIC_URL + "/image/krsti.png"}></img>
               </Link>
               <h3 className="mt-3">Al-A'raf</h3>
@@ -42,7 +42,7 @@ function Teams() {
           </div>
           <div data-aos="fade-up">
             <div className="team-image d-flex flex-column">
-              <Link to="/KRSRI">
+              <Link to="/Teams/KRSRI">
                 <img src={process.env.PUBLIC_URL + "/image/krsri.png"}></img>
               </Link>
               <h3 className="mt-3">Al-Ankabut</h3>
@@ -50,7 +50,7 @@ function Teams() {
           </div>
           <div data-aos="fade-up">
             <div className="team-image d-flex flex-column">
-              <Link data-aos="fade-up" to="/KRTMI">
+              <Link data-aos="fade-up" to="/Teams/KRTMI">
                 <img src={process.env.PUBLIC_URL + "/image/krtmi.png"}></img>
               </Link>
               <h3 className="mt-3">Artscitech</h3>
@@ -58,10 +58,18 @@ function Teams() {
           </div>
           <div data-aos="fade-up">
             <div className="team-image d-flex flex-column">
-              <Link data-aos="fade-up" to="/KRTI">
+              <Link data-aos="fade-up" to="/Teams/RP">
                 <img src={process.env.PUBLIC_URL + "/image/krti.png"}></img>
               </Link>
-              <h3 className="mt-3">Kuau King</h3>
+              <h3 className="mt-3">Kuau King RP</h3>
+            </div>
+          </div>
+          <div data-aos="fade-up">
+            <div className="team-image d-flex flex-column">
+              <Link data-aos="fade-up" to="/Teams/VTOL">
+                <img src={process.env.PUBLIC_URL + "/image/krti.png"}></img>
+              </Link>
+              <h3 className="mt-3">Kuau King VTOL</h3>
             </div>
           </div>
         </Container>
