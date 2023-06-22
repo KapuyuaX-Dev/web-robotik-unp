@@ -1,12 +1,12 @@
-import React from 'react'
-import '../style/Intro.css'
+import React from "react";
+import "../style/Intro.css";
 
-function Intro() {
+function Intro({ img }) {
   return (
-    <div className='banner'>
-        <img src={process.env.PUBLIC_URL+'/image/bg/intro.jpg'}/>
+    <div className="banner">
+      <img src={process.env.PUBLIC_URL + img} />
     </div>
-  )
+  );
 }
 
-export default Intro
+export default Intro;

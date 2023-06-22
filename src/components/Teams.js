@@ -18,57 +18,57 @@ function Teams() {
         <Container className="d-md-flex justify-content-center align-items-center flex-wrap text-center logo">
           <div data-aos="fade-up">
             <div className="team-image d-flex flex-column">
-              <Link to="/Teams/KRAI">
+              <a href="/Teams/KRAI">
                 <img src={process.env.PUBLIC_URL + "/image/krai.png"}></img>
-              </Link>
+              </a>
               <h3 className="mt-3">Do'a Mande</h3>
             </div>
           </div>
           <div data-aos="fade-up">
             <div className="team-image d-flex flex-column">
-              <Link to="/Teams/KRSBI">
+              <a href="/Teams/KRSBI-B">
                 <img src={process.env.PUBLIC_URL + "/image/krsbi.png"}></img>
-              </Link>
+              </a>
               <h3 className="mt-3">Al-Fath</h3>
             </div>
           </div>
           <div data-aos="fade-up">
             <div className="team-image d-flex flex-column">
-              <Link to="/Teams/KRSTI">
+              <a href="/Teams/KRSTI">
                 <img src={process.env.PUBLIC_URL + "/image/krsti.png"}></img>
-              </Link>
+              </a>
               <h3 className="mt-3">Al-A'raf</h3>
             </div>
           </div>
           <div data-aos="fade-up">
             <div className="team-image d-flex flex-column">
-              <Link to="/Teams/KRSRI">
+              <a href="/Teams/KRSRI">
                 <img src={process.env.PUBLIC_URL + "/image/krsri.png"}></img>
-              </Link>
+              </a>
               <h3 className="mt-3">Al-Ankabut</h3>
             </div>
           </div>
           <div data-aos="fade-up">
             <div className="team-image d-flex flex-column">
-              <Link data-aos="fade-up" to="/Teams/KRTMI">
+              <a data-aos="fade-up" href="/Teams/KRTMI">
                 <img src={process.env.PUBLIC_URL + "/image/krtmi.png"}></img>
-              </Link>
+              </a>
               <h3 className="mt-3">Artscitech</h3>
             </div>
           </div>
           <div data-aos="fade-up">
             <div className="team-image d-flex flex-column">
-              <Link data-aos="fade-up" to="/Teams/RP">
+              <a data-aos="fade-up" href="/Teams/RP">
                 <img src={process.env.PUBLIC_URL + "/image/krti.png"}></img>
-              </Link>
+              </a>
               <h3 className="mt-3">Kuau King RP</h3>
             </div>
           </div>
           <div data-aos="fade-up">
             <div className="team-image d-flex flex-column">
-              <Link data-aos="fade-up" to="/Teams/VTOL">
+              <a data-aos="fade-up" href="/Teams/VTOL">
                 <img src={process.env.PUBLIC_URL + "/image/krti.png"}></img>
-              </Link>
+              </a>
               <h3 className="mt-3">Kuau King VTOL</h3>
             </div>
           </div>

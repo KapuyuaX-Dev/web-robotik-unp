@@ -1,6 +1,6 @@
 .footer {
   height: auto;
-  background: black;
+  background: #212121;
 }
 
 .footer h4 {
@@ -33,7 +33,7 @@ ion-icon {
 }
 
 .footer .copyright {
-  background: black;
+  background: #212121;
   height: 50px;
   text-align: center;
 }
@@ -43,4 +43,8 @@ ion-icon {
   padding-top: 10px;
   color: whitesmoke;
   font-size: 12px;
+}
+
+.footer .copyright a {
+  color: whitesmoke;
 }

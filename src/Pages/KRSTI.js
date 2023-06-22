@@ -1,41 +1,72 @@
-import React, { useEffect, useState } from 'react'
-import Construction from '../components/Construction';
-import { NavigationBar } from '../components/PageNavbar';
-import { About, Intro } from '../components/TeamComponen';
-import { Ring } from 'react-awesome-spinners';
+import React, { useEffect, useState } from "react";
+import Construction from "../components/Construction";
+import { NavigationBar } from "../components/PageNavbar";
+import { About, Intro } from "../components/TeamComponen";
+import { Ring } from "react-awesome-spinners";
+import axios from "axios";
+
+const baseUrl = "http://robotik.pkm.unp.ac.id/api/data/teams.php?team=krsti";
+
 function KRSTI() {
-  const [about,setAbout] = useState({
-    'team':"Al-A'raf",
-    'logo':'/image/krsti.png',
-    'description':'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel varius ipsum. In id libero nulla. Maecenas enim lacus, consectetur ac rutrum sit amet, venenatis nec leo. Nullam tincidunt tempor lectus eget rhoncus. Mauris semper dignissim nulla ut varius. Nulla facilisi. Nunc eget lacus dapibus, ornare orci sit amet, consectetur dui. Curabitur cursus ante enim. Integer vitae bibendum dui. Praesent in tincidunt arcu. Cras mollis vel velit id luctus. Donec malesuada sem sed neque tincidunt, ut commodo elit pulvinar. Cras libero ante, dignissim at gravida sed, imperdiet quis elit. Sed scelerisque arcu non neque rhoncus, vitae ornare metus consectetur. Duis.'
-  })
-  document.title = about.team;
+  const [content, setContent] = useState({
+    about: {
+      banner: "",
+      team: "",
+      logo: "",
+      description: "",
+    },
+    video: { id: "" },
+    teams: {
+      Advisor: [],
+      Leader: {},
+      Member: [],
+    },
+  });
+
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 200);
-    return () => clearTimeout(timer);
+    axios.get(baseUrl).then((response) => {
+      //console.log(response.data);
+      setContent(response.data);
+    });
+
+    setLoading(false);
   }, []);
 
-  if(loading){
-    return(
-        <div className='d-flex flex-column align-items-center justify-content-center my-5'>
-          <Ring/>
-          <h3>Loading</h3>
-        </div>
-    )
+  document.title = content.about.team;
+  const [color, setColor] = useState(false);
+
+  const changeColor = () => {
+    if (window.scrollY >= 90) {
+      setColor(true);
+    } else {
+      setColor(false);
+    }
+  };
+  window.addEventListener("scroll", changeColor);
+
+  if (loading) {
+    return (
+      <div className="d-flex flex-column align-items-center justify-content-center my-5">
+        <Ring />
+        <h3>Loading</h3>
+      </div>
+    );
   }
   return (
     <div>
-        <NavigationBar/>
-        <Intro/>
+      <NavigationBar color={color} />
+      <Intro imageSrc={content.about.banner} />
       <section>
-        <About team={about.team} logo={about.logo} description={about.description}/>
-        <Construction/>
+        <About
+          team={content.about.team}
+          logo={content.about.logo}
+          description={content.about.description}
+        />
+        <Construction />
       </section>
     </div>
-  )
+  );
 }
 
-export default KRSTI
+export default KRSTI;

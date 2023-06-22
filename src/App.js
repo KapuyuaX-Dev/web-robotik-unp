@@ -20,7 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/Teams/KRAI" element={<KRAI />} />
-        <Route path="/Teams/KRSBI" element={<KRSBI />} />
+        <Route path="/Teams/KRSBI-B" element={<KRSBI />} />
         <Route path="/Teams/KRSTI" element={<KRSTI />} />
         <Route path="/Teams/KRSRI" element={<KRSRI />} />
         <Route path="/Teams/KRTMI" element={<KRTMI />} />

@@ -86,10 +86,7 @@ const NavigationBar = () => {
                   Gallery
                 </Link>
               </Nav.Link>
-              <Nav.Link
-                className="nav-links"
-                onClick={() => navigate("/sponsors")}
-              >
+              <Nav.Link className="nav-links" href="/sponsors">
                 Sponsors
               </Nav.Link>
             </Nav>

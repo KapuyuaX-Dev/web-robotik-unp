@@ -1,10 +1,8 @@
 import { Navbar, Container, Nav } from "react-bootstrap";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import "../style/Header.css";
-import { useNavigate } from "react-router-dom";
 
-export function NavigationBar() {
-  const navigate = useNavigate();
+export function NavigationBar({ color }) {
   return (
     <div className="header">
       <Navbar
@@ -12,7 +10,7 @@ export function NavigationBar() {
         variant="dark"
         fixed="top"
         expand="md"
-        className="colorNav"
+        className={color ? "colorNav" : "transparentNav"}
       >
         <Container fluid>
           <Navbar.Brand href="/">
@@ -32,7 +30,7 @@ export function NavigationBar() {
               <Nav.Link href="/news/all">News</Nav.Link>
               <NavDropdown title="Teams" id="responsive-navbar-nav">
                 <NavDropdown.Item href="/Teams/krai">KRAI</NavDropdown.Item>
-                <NavDropdown.Item href="/Teams/krsbi">KRSBI</NavDropdown.Item>
+                <NavDropdown.Item href="/Teams/krsbi-b">KRSBI</NavDropdown.Item>
                 <NavDropdown.Item href="/Teams/krsti">KRSTI</NavDropdown.Item>
                 <NavDropdown.Item href="/Teams/krsri">KRSRI</NavDropdown.Item>
                 <NavDropdown.Item href="/Teams/krtmi">KRTMI</NavDropdown.Item>

@@ -1,15 +1,16 @@
-import React, { useEffect, useState } from 'react'
-import Construction from '../components/Construction'
-import { NavigationBar } from '../components/PageNavbar';
-import { About, Intro } from '../components/TeamComponen';
-import { Ring } from 'react-awesome-spinners';
+import React, { useEffect, useState } from "react";
+import Construction from "../components/Construction";
+import { NavigationBar } from "../components/PageNavbar";
+import { About, Intro } from "../components/TeamComponen";
+import { Ring } from "react-awesome-spinners";
 
 function KRSRI() {
-  const [about,setAbout] = useState({
-    'team':"Al-Ankabut",
-    'logo':'/image/krsri.png',
-    'description':'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel varius ipsum. In id libero nulla. Maecenas enim lacus, consectetur ac rutrum sit amet, venenatis nec leo. Nullam tincidunt tempor lectus eget rhoncus. Mauris semper dignissim nulla ut varius. Nulla facilisi. Nunc eget lacus dapibus, ornare orci sit amet, consectetur dui. Curabitur cursus ante enim. Integer vitae bibendum dui. Praesent in tincidunt arcu. Cras mollis vel velit id luctus. Donec malesuada sem sed neque tincidunt, ut commodo elit pulvinar. Cras libero ante, dignissim at gravida sed, imperdiet quis elit. Sed scelerisque arcu non neque rhoncus, vitae ornare metus consectetur. Duis.'
-  })
+  const [about, setAbout] = useState({
+    team: "Al-Ankabut",
+    logo: "/image/krsri.png",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel varius ipsum. In id libero nulla. Maecenas enim lacus, consectetur ac rutrum sit amet, venenatis nec leo. Nullam tincidunt tempor lectus eget rhoncus. Mauris semper dignissim nulla ut varius. Nulla facilisi. Nunc eget lacus dapibus, ornare orci sit amet, consectetur dui. Curabitur cursus ante enim. Integer vitae bibendum dui. Praesent in tincidunt arcu. Cras mollis vel velit id luctus. Donec malesuada sem sed neque tincidunt, ut commodo elit pulvinar. Cras libero ante, dignissim at gravida sed, imperdiet quis elit. Sed scelerisque arcu non neque rhoncus, vitae ornare metus consectetur. Duis.",
+  });
   document.title = about.team;
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -19,24 +20,39 @@ function KRSRI() {
     return () => clearTimeout(timer);
   }, []);
 
-  if(loading){
-    return(
-        <div className='d-flex flex-column align-items-center justify-content-center my-5'>
-          <Ring/>
-          <h3>Loading</h3>
-        </div>
-    )
+  const [color, setColor] = useState(false);
+
+  const changeColor = () => {
+    if (window.scrollY >= 90) {
+      setColor(true);
+    } else {
+      setColor(false);
+    }
+  };
+  window.addEventListener("scroll", changeColor);
+
+  if (loading) {
+    return (
+      <div className="d-flex flex-column align-items-center justify-content-center my-5">
+        <Ring />
+        <h3>Loading</h3>
+      </div>
+    );
   }
   return (
     <div>
-        <NavigationBar/>
-        <Intro/>
+      <NavigationBar color={color} />
+      <Intro imageSrc={"/image/bg/KRSRI.png"} />
       <section>
-        <About team={about.team} logo={about.logo} description={about.description}/>
-        <Construction/>
+        <About
+          team={about.team}
+          logo={about.logo}
+          description={about.description}
+        />
+        <Construction />
       </section>
     </div>
-  )
+  );
 }
 
-export default KRSRI
+export default KRSRI;
