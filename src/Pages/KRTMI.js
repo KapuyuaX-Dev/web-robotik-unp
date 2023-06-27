@@ -41,7 +41,7 @@ function KRTMI() {
   }
   return (
     <div>
-      <NavigationBar color={color} />
+      <NavigationBar color={color} page={"krtmi"} />
       <Intro imageSrc={"/image/bg/KRTMI.png"} />
       <section>
         <About

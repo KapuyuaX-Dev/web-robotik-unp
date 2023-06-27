@@ -59,7 +59,7 @@ function KRAI() {
   return (
     <div>
       <ScrollToTop />
-      <NavigationBar color={color} />
+      <NavigationBar color={color} page={"krai"} />
       <Intro imageSrc={content.about.banner} />
       <section>
         <About

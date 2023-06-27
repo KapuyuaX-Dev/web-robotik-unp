@@ -92,6 +92,14 @@ export const ContextProvider = ({ children }) => {
         nama: "",
         jurusan: "",
         foto: "",
+        social: [],
+      },
+    ],
+    teams: [
+      {
+        uri: "",
+        logo: "",
+        nama: "",
       },
     ],
   });

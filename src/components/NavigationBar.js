@@ -86,6 +86,9 @@ const NavigationBar = () => {
                   Gallery
                 </Link>
               </Nav.Link>
+              <Nav.Link className="nav-links" href="/publication">
+                Publication
+              </Nav.Link>
               <Nav.Link className="nav-links" href="/sponsors">
                 Sponsors
               </Nav.Link>

@@ -12,7 +12,7 @@ import {
 export function Intro({ imageSrc }) {
   return (
     <>
-      <div className="banner">
+      <div className="team-banner">
         <img src={process.env.PUBLIC_URL + imageSrc} alt="Banner" />
       </div>
     </>
@@ -119,7 +119,11 @@ export function Teams({ member }) {
       <div className="d-flex justify-content-center align-items-center flex-column">
         {member.Advisor.length > 0 && (
           <>
-            <h3 data-aos="fade-up">Advisor</h3>
+            <div className="py-5">
+              <h3 data-aos="fade-up">
+                <span>Advisor</span>
+              </h3>
+            </div>
             <div>
               {member.Advisor.map((advisor, i) => (
                 <NameCard key={i} person={advisor} />
@@ -127,14 +131,20 @@ export function Teams({ member }) {
             </div>
           </>
         )}
-        <h3 data-aos="fade-up">Leader</h3>
+        <div className="py-5">
+          <h3 data-aos="fade-up">
+            <span>Leader</span>
+          </h3>
+        </div>
         <NameCard person={member.Leader} />
         {member.Member.map((member, i) => (
           <>
-            <h3 data-aos="fade-up" key={i}>
-              {member.role}
-            </h3>
-            <div className="d-flex justify-content-evenly flex-wrap">
+            <div className="py-5">
+              <h3 data-aos="fade-up" key={i}>
+                <span>{member.role}</span>
+              </h3>
+            </div>
+            <div className="d-flex justify-content-center gap-5 flex-wrap">
               {member.member.map((person, i) => (
                 <NameCard key={i} person={person} />
               ))}

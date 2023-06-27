@@ -72,8 +72,8 @@ function Achievement() {
     {
       year: 2023,
       achievement: [
-        "Finalis Kontes Robot Abu Indonesia tingkat Nasional di Universitas Semarang",
-        "Finalis Kontes Robot Thematik Indonesia tingkat Nasional di Universitas Semarang",
+        "Finalis Kontes Robot Abu Indonesia tingkat Nasional di Universitas Semarang (USM)",
+        "Finalis Kontes Robot Thematik Indonesia tingkat Nasional di Universitas Semarang (USM)",
       ],
     },
   ]);
@@ -143,8 +143,8 @@ function Achievement() {
         <h2 data-aos="fade-up">ACHIEVEMENT</h2>
       </Container>
       <Container
-        data-aos="fade-up"
-        className="d-md-flex flex-wrap justify-content-center align-items-center"
+        data-aos="zoom-in-up"
+        className="d-md-flex flex-wrap justify-content-center align-items-start"
       >
         <Card className="d-flex text-center align-items-center mt-4">
           <h5 className="m-3 fontSize-1">Kontes Robot Indonesia</h5>
@@ -175,18 +175,20 @@ function Achievement() {
             </Form>
           </div>
         </Card>
-        <Card className="d-flex align-items-center mt-4">
+        <div className="timeline">
           <ul>
             {achievement[tahun].achievement.map((achievement, i) => (
-              <li>{achievement}</li>
+              <li>
+                <div className="items">{achievement}</div>
+              </li>
             ))}
           </ul>
-        </Card>
+        </div>
       </Container>
 
       <Container
-        data-aos="fade-up"
-        className="d-md-flex flex-wrap justify-content-center align-items-center"
+        data-aos="zoom-in-up"
+        className="d-md-flex flex-wrap justify-content-center mt-5 align-items-start"
       >
         <Card className="d-flex text-center align-items-center mt-4">
           <h5 className="m-3 fontSize-1">Kontes Robot Terbang Indonesia</h5>
@@ -215,20 +217,22 @@ function Achievement() {
             </Form>
           </div>
         </Card>
-        <Card className="d-flex align-items-center mt-4">
+        <div className="timeline">
           <ul>
             {achievementKRTI[tahunKrti].achievement.map((achievement, i) => (
-              <li>{achievement}</li>
+              <li>
+                <div className="items">{achievement}</div>
+              </li>
             ))}
           </ul>
-        </Card>
+        </div>
       </Container>
       <Container>
         <h2 data-aos="fade-up">INNOVATION</h2>
       </Container>
       <Container className="d-flex mt-5 flex-wrap justify-content-evenly align-items-center align-content-center">
         {invention.map((invention, i) => (
-          <div data-aos="fade-up" key={i} className="invention">
+          <div data-aos="zoom-in-down" key={i} className="invention">
             <h3>{invention.title}</h3>
             <div className="description">
               <img src={process.env.PUBLIC_URL + invention.image} alt="img" />

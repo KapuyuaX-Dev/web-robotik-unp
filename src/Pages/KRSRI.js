@@ -41,7 +41,7 @@ function KRSRI() {
   }
   return (
     <div>
-      <NavigationBar color={color} />
+      <NavigationBar color={color} page={"krsri"} />
       <Intro imageSrc={"/image/bg/KRSRI.png"} />
       <section>
         <About

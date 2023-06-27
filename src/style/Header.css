@@ -18,7 +18,8 @@
 }
 
 .active {
-  color: #fca311;
+  color: #fca311 !important;
+  background: none !important;
   text-decoration: none;
 }
 

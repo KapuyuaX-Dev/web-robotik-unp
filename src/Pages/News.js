@@ -28,7 +28,7 @@ function News() {
   }
   return (
     <div>
-      <NavigationBar color={true} />
+      <NavigationBar color={true} page={"news"} />
       <section className="m-lg--5 bg-secondary bg-gradient">
         <NewsPageComponent news={news} />
       </section>

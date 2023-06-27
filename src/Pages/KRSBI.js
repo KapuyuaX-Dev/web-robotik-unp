@@ -60,7 +60,7 @@ function KRSBI() {
   return (
     <div>
       <ScrollToTop />
-      <NavigationBar color={color} />
+      <NavigationBar color={color} page={"krsbi-b"} />
       <section>
         <Intro imageSrc={content.about.banner} />
         <About

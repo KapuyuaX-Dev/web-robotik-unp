@@ -1,13 +1,13 @@
-import React, { useState } from 'react'
-import { Col, Container, Figure, Row } from 'react-bootstrap'
-import OwlCarousel, {Options} from 'react-owl-carousel'
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
-import '../style/Gallery.css'
+import React, { useState } from "react";
+import { Col, Container, Figure, Row } from "react-bootstrap";
+import OwlCarousel, { Options } from "react-owl-carousel";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
+import "../style/Gallery.css";
 import Aos from "aos";
-import "aos/dist/aos.css"
+import "aos/dist/aos.css";
 import { useEffect } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 function Lightbox({ imageUrl, onClose }) {
   return (
@@ -23,63 +23,83 @@ function Lightbox({ imageUrl, onClose }) {
 }
 
 function Galery() {
-  const [imageFile, setImageFile] = useState(['001.JPG', '002.JPG', '003.JPG', '004.JPG', '005.JPG', '006.JPG', '007.JPG', '008.JPG', '009.JPG', '010.JPG'])
+  const [imageFile, setImageFile] = useState([
+    "001.JPG",
+    "002.JPG",
+    "003.JPG",
+    "004.JPG",
+    "005.JPG",
+    "006.JPG",
+    "007.JPG",
+    "008.JPG",
+    "009.JPG",
+    "010.JPG",
+  ]);
 
-  useEffect(()=>{
-    Aos.init({duration:2000});
-},[])
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
 
   const [selectedImage, setSelectedImage] = useState(null);
 
   function handleImageClick(event) {
     const imageUrl = event.target.src;
     setSelectedImage(imageUrl);
-    
   }
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   return (
-    <div id='galery' className="gallery">
-        <Container data-aos="fade-up">
-          <h2>GALLERY</h2>
-          <div className='d-flex justify-content-space-evenly'>
-           <OwlCarousel className='owl-theme mt-5'
-          loop   
-          margin={10} 
-         
-          responsive={
-            {
-              0:{
-                items:1
-            },
-            600:{
-                items:2
-            },
-            1000:{
-                items:3
-            }
-            }
-          }
-          autoplay={true} 
-          autoplayTimeout={2000}
-          autoplayHoverPause={true}
+    <div id="galery" className="gallery">
+      <Container data-aos="fade-up">
+        <h2>GALLERY</h2>
+        <div className="d-flex justify-content-space-evenly">
+          <OwlCarousel
+            className="owl-theme mt-5"
+            loop
+            margin={10}
+            responsive={{
+              0: {
+                items: 1,
+              },
+              600: {
+                items: 2,
+              },
+              1000: {
+                items: 3,
+              },
+            }}
+            autoplay={true}
+            autoplayTimeout={2000}
+            autoplayHoverPause={true}
           >
-            {
-              imageFile.map((image,i)=>(
-                  <img data-aos="fade-up" key={i} src={process.env.PUBLIC_URL+'/image/gallery/'+image} onClick={handleImageClick}/>
-              ))
-            }
-            <div data-aos="fade-up" className='item d-flex align-items-center justify-content-center text-center more' onClick={()=>navigate('/Gallery')} >More . . .</div>
-          </OwlCarousel> 
-          </div>
-        </Container>
-         {selectedImage && (
-            <Lightbox imageUrl={selectedImage} onClose={() => setSelectedImage(null)} />
-           )}
-        <br></br>
+            {imageFile.map((image, i) => (
+              <img
+                data-aos="fade-up"
+                key={i}
+                src={process.env.PUBLIC_URL + "/image/gallery/" + image}
+                onClick={handleImageClick}
+              />
+            ))}
+            <div
+              data-aos="fade-up"
+              className="item d-flex align-items-center justify-content-center text-center more"
+              onClick={() => navigate("/Gallery")}
+            >
+              More . . .
+            </div>
+          </OwlCarousel>
+        </div>
+      </Container>
+      {selectedImage && (
+        <Lightbox
+          imageUrl={selectedImage}
+          onClose={() => setSelectedImage(null)}
+        />
+      )}
+      <br></br>
     </div>
-  )
+  );
 }
 
-export default Galery
+export default Galery;

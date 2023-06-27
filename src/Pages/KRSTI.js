@@ -55,7 +55,7 @@ function KRSTI() {
   }
   return (
     <div>
-      <NavigationBar color={color} />
+      <NavigationBar color={color} page={"krsti"} />
       <Intro imageSrc={content.about.banner} />
       <section>
         <About

@@ -1,99 +1,98 @@
-.home{
-    background-color: whitesmoke;
+.home {
+  background-color: whitesmoke;
 }
 /*https://coolors.co/palette/000000-14213d-fca311-e5e5e5-ffffff*/
 
 .marquee {
-    width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    background:#FCA311;
-    color:whitesmoke;
-    text-align: left;
-  }
-  
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background: #fca311;
+  color: whitesmoke;
+  text-align: left;
+}
+
 .marquee span {
-    width: 100%;
-    font-size: 16px;
-    animation: marquee 15s linear infinite;
+  width: 100%;
+  font-size: 16px;
+  animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
   }
-  
-  @keyframes marquee {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(-20%);
-    }
+  100% {
+    transform: translateX(-20%);
   }
-  
- .marquee span.visible {
-    display: inline-block;
-    animation-play-state: running;
-  }
-  
- .marquee span.hidden {
-    display: none;
-    animation-play-state: paused;
-  }
-
-
-.home .aboutSection{
-    margin-top: 20px;
-    background-color: #e5e5e5;
 }
 
-.home .about{
-    margin-top: 40px;
-    background-color: whitesmoke;
-    max-width: 900px;
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-    border: 2px solid white;
-    box-shadow: 0px 6px 11px 0px rgba(0, 0, 0, 0.8); 
-    margin-bottom: 50px;
+.marquee span.visible {
+  display: inline-block;
+  animation-play-state: running;
 }
 
-.home .about .about-description{
-    width: 100%;
-    max-width: 900px;
-    display: grid;
-    grid-template-columns: 0.5fr 1fr;
-    align-items: center;
-    padding-bottom: 50px;
+.marquee span.hidden {
+  display: none;
+  animation-play-state: paused;
 }
 
-.home .about .about-description img{
-    align-items: center;
-    height: 200px;
+.home .aboutSection {
+  margin-top: 20px;
+  background-color: #e5e5e5;
 }
 
-.home .about h2{
-    letter-spacing: 2px;
-    font-weight: bold;
-    font-family:sans-serif;
-    margin-top: -20px;
-    margin-left: 60%;
-    padding: 0px 10px;
-    width: 200px;
-    border-bottom: 3px solid #FCA311;
+.home .about {
+  margin-top: 40px;
+  background-color: whitesmoke;
+  max-width: 900px;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  border: 2px solid white;
+  box-shadow: 0px 6px 11px 0px rgba(0, 0, 0, 0.8);
+  margin-bottom: 50px;
 }
 
-.home .about-description .kiri{
-    padding-left: 80px;
-    padding-right: 0px;
-    display: flex;
-    align-items : center;
+.home .about .about-description {
+  width: 100%;
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  align-items: center;
+  padding-bottom: 50px;
 }
 
-.home .about-description .kanan{
-    margin-top: 40px;
-    overflow: hidden;
+.home .about .about-description img {
+  align-items: center;
+  height: 200px;
 }
 
-.home .about .about-description p{
-    text-align: justify;
+.home .about h2 {
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-family: sans-serif;
+  margin-top: -20px;
+  margin-left: 60%;
+  padding: 0px 10px;
+  width: 200px;
+  border-bottom: 3px solid #fca311;
+}
+
+.home .about-description .kiri {
+  padding-left: 80px;
+  padding-right: 0px;
+  display: flex;
+  align-items: center;
+}
+
+.home .about-description .kanan {
+  margin-top: 40px;
+  overflow: hidden;
+}
+
+.home .about .about-description p {
+  text-align: justify;
 }
 
 /*
@@ -113,271 +112,289 @@
     object-fit: cover;
 }*/
 
-.visionSection{
-    margin-top: 20px;
-    background-color: whitesmoke;
+.visionSection {
+  margin-top: 20px;
+  background-color: whitesmoke;
 }
 
+.vision h2 {
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-family: sans-serif;
+  margin-top: 15px;
+  padding: 0px 10px;
+  width: 160px;
+  color: #14213d;
+  border-bottom: 3px solid #fca311;
+}
 
-.vision h2{
+.vision h5 {
+  margin: 30px 20px 30px 20px;
+  line-height: 40px;
+}
+
+.missionSection {
+  margin-top: 20px;
+  background-color: #e5e5e5;
+}
+
+.mission h2 {
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-family: sans-serif;
+  margin-top: 30px;
+  padding: 0px 10px;
+  width: 190px;
+  color: #14213d;
+  border-bottom: 3px solid #fca311;
+}
+
+.mission li {
+  text-align: justify;
+  font-family: sans-serif;
+  letter-spacing: 2px;
+  line-height: 20px;
+  font-size: 16px;
+  margin: 20px 20px 20px 20px;
+}
+
+.pengurus {
+  margin-top: 35px;
+  background-color: whitesmoke;
+}
+
+.pengurus h2 {
+  margin-top: 30px;
+  width: 470px;
+  color: #14213d;
+  border-bottom: 3px solid #fca311;
+}
+
+.pengurus .card {
+  margin: 10px auto;
+  width: 400px;
+  /*height: 130px;*/
+  background-color: whitesmoke;
+  border-radius: 5px;
+  /*box-shadow: 0px 6px 11px 0px rgba(0, 0, 0, 0.5);*/
+  /*border: 3px solid #e5e5e5;*/
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 130px 200px;
+}
+
+.pengurus .card::before {
+  content: "";
+  width: 90px;
+  height: 465px;
+  left: 170px;
+  top: -150px;
+  background: linear-gradient(#00e5ff, #b400fb);
+  position: absolute;
+  animation: animate 5s linear infinite;
+  transform: rotate(285deg);
+}
+
+.pengurus .card::after {
+  content: "";
+  position: absolute;
+  background: whitesmoke;
+  inset: 3px;
+  border-radius: 5px;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.pengurus img {
+  background-color: #e5e5e5;
+  height: 100px;
+  width: 100px;
+  margin: 15px 15px 15px 15px;
+  z-index: 1;
+}
+
+.pengurus .card .profileCard-description {
+  background-color: whitesmoke;
+  z-index: 1;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.pengurus .card .wrapper {
+  height: 42px;
+  width: inherit;
+  z-index: 1;
+  margin: 2px auto;
+}
+
+.pengurus .card .profileCard-sosmed {
+  margin-right: 5px;
+  margin-left: 4px;
+  border-top: 2px solid #e5e5e5;
+  z-index: 1;
+  padding: 8px;
+}
+
+.pengurus .card .profileCard-sosmed a {
+  color: #777;
+}
+
+.pengurus .card .profileCard-sosmed :hover {
+  opacity: 80%;
+  cursor: pointer;
+}
+
+.pengurus .card h2 {
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin: 20px 15px 10px 10px;
+  text-align: left;
+  border: none;
+  color: black;
+}
+
+.pengurus .card h3 {
+  color: gray;
+  font-size: 14px;
+  width: 250px;
+  font-family: sans-serif;
+  margin: 10px 15px 10px 10px;
+  text-align: left;
+}
+
+@media only screen and (max-width: 768px) {
+  .home .about .about-description {
+    width: 85%;
+    grid-template-columns: 1fr;
+    padding-bottom: 20px;
+  }
+
+  .home .about h2 {
     letter-spacing: 2px;
     font-weight: bold;
-    font-family:sans-serif;
-    margin-top: 15px;
-    padding: 0px 10px;
-    width: 160px;
-    color: #14213d;
-    border-bottom: 3px solid #FCA311;
-}
-
-.vision h5{
-    margin: 30px 20px 30px 20px;
-    line-height: 40px;
-}
-
-.missionSection{
-    margin-top: 20px;
-    background-color: #e5e5e5;
-}
-
-.mission h2{
-    letter-spacing: 2px;
-    font-weight: bold;
-    font-family:sans-serif;
-    margin-top: 30px;
-    padding: 0px 10px;
-    width: 190px;
-    color: #14213d;
-    border-bottom: 3px solid #FCA311;
-}
-
-.mission li{
-    text-align: justify;
     font-family: sans-serif;
-    letter-spacing:2px;
-    line-height: 20px;
-    font-size: 16px;
-    margin: 20px 20px 20px 20px;
+    margin-top: 40px;
+    padding: 0px 10px;
+    width: 200px;
+    border-bottom: none;
+    align-items: center;
+    margin-left: 190px;
+  }
+
+  .home .about .about-description img {
+    align-items: center;
+    height: 200px;
+    margin-left: 80px;
+    margin-top: 25px;
+  }
+  .home .about-description .kiri {
+    margin: 10px auto;
+  }
+
+  .home .about-description .kanan {
+    margin-left: 12%;
+  }
 }
 
-.pengurus{
-    margin-top: 35px;
-    background-color: whitesmoke;
-}
+@media only screen and (max-width: 500px) {
+  .home {
+    padding-top: 60px;
+  }
+  .pengurus .president {
+    margin: 10px auto;
+  }
 
-.pengurus h2{
+  .home .about .about-description {
+    width: 85%;
+    grid-template-columns: 1fr;
+    padding-bottom: 20px;
+  }
+
+  .home .about h2 {
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-family: sans-serif;
+    padding: 0px 10px;
+    width: 200px;
+    border-bottom: none;
+    text-align: center;
+    margin: 30px auto;
+  }
+
+  .home .about .about-description img {
+    height: 200px;
+    margin: 10px auto;
+  }
+  .about-description .kiri {
+    margin: 25px auto;
+  }
+
+  .home .about-description .kanan {
+    margin-left: 12%;
+  }
+
+  .pengurus h2 {
     margin-top: 30px;
-    width: 470px;
+    width: 250px;
     color: #14213d;
-    border-bottom: 3px solid #FCA311;
-}
+    border-bottom: 3px solid #fca311;
+  }
 
-.pengurus .card{
-    width: 400px;
-    height: 130px;
+  .pengurus .card {
+    margin: 5px auto;
+    width: 300px;
     background-color: whitesmoke;
     border-radius: 5px;
     /*box-shadow: 0px 6px 11px 0px rgba(0, 0, 0, 0.5);*/
     /*border: 3px solid #e5e5e5;*/
-    margin-top: 0px;
-    margin-left: 10px;
-    margin-bottom: 30px;
     overflow: hidden;
     display: grid;
-    grid-template-columns: 130px 200px;
-}
+    grid-template-columns: 300px;
+  }
 
-.pengurus .card::before{
-    content:'';
+  .pengurus .card::before {
     width: 90px;
-    height: 450px;
-    left: 170px;  
-    top: -150px;
-    background: linear-gradient(#00e5ff,#b400fb);
-    position: absolute;
-    animation: animate 5s linear infinite;
-    transform: rotate(285deg);
-    
-}
+    height: 600px;
+  }
 
-.pengurus .card::after{
-    content:'';
-    position: absolute;
-    background: whitesmoke;
-    inset: 3px;
-    border-radius: 5px;
-}
-
-@keyframes animate{
-    0%{
-        transform: rotate(0deg);
-    }
-
-    100%{
-        transform: rotate(360deg);
-    }
-}
-
-.pengurus img{
+  .pengurus img {
     background-color: #e5e5e5;
     height: 100px;
     width: 100px;
-    margin: 15px 15px 15px 15px;
+    margin: 25px 15px 0px 100px;
     z-index: 1;
- }
+  }
 
-.pengurus .card .profileCard-description{
+  .pengurus .card .profileCard-description {
     background-color: whitesmoke;
     z-index: 1;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
+    margin: 20px auto;
+  }
 
-.pengurus .card h2{
+  .pengurus .card h2 {
     font-size: 18px;
     font-family: sans-serif;
     font-weight: bold;
-    margin: 20px 15px 10px 10px;
-    text-align: left;
+    margin: 15px 15px 10px 10px;
+    text-align: center;
     border: none;
     color: black;
-}
+  }
 
-.pengurus .card h3{
+  .pengurus .card h3 {
     color: gray;
     font-size: 14px;
-    width: 250px;
     font-family: sans-serif;
     margin: 10px 15px 10px 10px;
-    text-align: left;
-}
-
-@media only screen and (max-width:768px) {
-    .home .about .about-description{
-        width: 85%;
-        grid-template-columns: 1fr;
-        padding-bottom: 20px;
-    }
-
-    .home .about h2{
-        letter-spacing: 2px;
-        font-weight: bold;
-        font-family:sans-serif;
-        margin-top: 40px;
-        padding: 0px 10px;
-        width: 200px;
-        border-bottom: none;
-        align-items: center;
-        margin-left: 190px;
-    }
-
-    .home .about .about-description img{
-        align-items: center;
-        height: 200px;
-        margin-left: 80px;
-        margin-top: 25px;
-    }
-    .home .about-description .kiri{
-        margin: 10px auto;
-    }
-    
-    .home .about-description .kanan{
-       margin-left: 12%;
-    }
-    
-}
-
-@media only screen and (max-width:500px) {
-    .home{
-        padding-top: 60px;
-    }
-    .pengurus .president{
-        margin-top: 30px;
-        margin-left: 0px;
-    }
-
-    .home .about .about-description{
-        width: 85%;
-        grid-template-columns: 1fr;
-        padding-bottom: 20px;
-    }
-
-    .home .about h2{
-        letter-spacing: 2px;
-        font-weight: bold;
-        font-family:sans-serif;
-        padding: 0px 10px;
-        width: 200px;
-        border-bottom: none;
-        text-align: center;
-        margin: 30px auto;
-    }
-
-    .home .about .about-description img{
-        height: 200px;
-        margin:10px auto;
-    }
-    .about-description .kiri{
-        margin: 25px auto;
-    }
-    
-    .home .about-description .kanan{
-       margin-left: 12%;
-    }
-
-    .pengurus h2{
-        margin-top: 30px;
-        width: 250px;
-        color: #14213d;
-        border-bottom: 3px solid #FCA311;
-    }
-
-    .pengurus .card{
-        width: 300px;
-        height: 300px;
-        background-color: whitesmoke;
-        border-radius: 5px;
-        /*box-shadow: 0px 6px 11px 0px rgba(0, 0, 0, 0.5);*/
-        /*border: 3px solid #e5e5e5;*/
-        overflow: hidden;
-        display: grid;
-        grid-template-columns: 300px;
-    }
-
-    .pengurus .card::before{
-        width: 90px;
-        height: 600px;
-    }
-
-    .pengurus img{
-        background-color: #e5e5e5;
-        height: 100px;
-        width: 100px;
-        margin: 25px 15px 0px 100px;
-        z-index: 1;
-     }
-
-     .pengurus .card .profileCard-description{
-        background-color: whitesmoke;
-        z-index: 1;
-        margin: 20px auto;
-    }
-
-    .pengurus .card h2{
-        font-size: 18px;
-        font-family: sans-serif;
-        font-weight: bold;
-        margin: 15px 15px 10px 10px;
-        text-align: center;
-        border: none;
-        color: black;
-    }
-    
-    .pengurus .card h3{
-        color: gray;
-        font-size: 14px;
-        font-family: sans-serif;
-        margin: 10px 15px 10px 10px;
-        text-align: center;
-    }
+    text-align: center;
+  }
 }

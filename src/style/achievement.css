@@ -11,8 +11,7 @@
 
 .achievement .card {
   width: 260px;
-
-  margin-left: 15px;
+  margin-left: -100px;
   margin-right: 15px;
   background-color: whitesmoke;
   border-radius: 15px;
@@ -72,14 +71,8 @@
   font-size: 18px;
 }
 
-.achievement ul,
-h5 {
+.achievement h5 {
   z-index: 1;
-}
-
-.achievement li {
-  z-index: 1;
-  margin: 15px 10px 10px 10px;
 }
 
 .achievement .invention {
@@ -132,6 +125,49 @@ h5 {
   }
 }
 
+.timeline {
+  margin-left: 0px;
+}
+
+.timeline ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.timeline li {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.timeline ul li {
+  position: relative;
+  width: 0;
+  border-left: 2px solid #14213d;
+  margin: 0 auto;
+}
+
+.timeline ul li:before {
+  content: "";
+  position: absolute;
+  top: 45%;
+  left: -9px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #14213d;
+  background: #e5e5e5;
+  transition: background 1s ease-in-out;
+}
+
+.timeline li .items {
+  padding: 20px;
+  margin-left: 20px;
+  width: 250px;
+  box-shadow: 2px 3px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  border: 1px solid #e5e5e5;
+}
+
 @media only screen and (max-width: 500px) {
   .achievement h2 {
     padding-top: 30px;
@@ -142,6 +178,10 @@ h5 {
 
   .achievement .card {
     margin: 20px auto;
+  }
+
+  .timeline {
+    margin-left: -300px;
   }
 
   .achievement .invention {

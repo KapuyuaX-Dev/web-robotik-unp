@@ -13,6 +13,7 @@ import NewsArticle from "./Pages/NewsArticle";
 import NotFound from "./Pages/NotFound";
 import { useContext } from "react";
 import Vtol from "./Pages/Vtol";
+import Publication from "./Pages/Publication";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/gallery" element={<Galery />} />
         <Route path="/news/:id" element={<NewsArticle />} />
         <Route path="/news/all" element={<News />} />
+        <Route path="/publication" element={<Publication />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

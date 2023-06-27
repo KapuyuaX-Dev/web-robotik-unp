@@ -23,7 +23,7 @@ function Galery() {
   }
   return (
     <div>
-      <NavigationBar color={true} />
+      <NavigationBar color={true} page={"gallery"} />
       <section className="m-5">
         <Construction />
       </section>

@@ -8,6 +8,13 @@ import "aos/dist/aos.css";
 import { useContext, useEffect, useState } from "react";
 import FloatingButton from "./FloatingButton";
 import { AboutContext } from "../Context";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faInstagram,
+  faLinkedin,
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
+import { Ring } from "react-awesome-spinners";
 
 const Home = () => {
   document.title = "Robotik UNP";
@@ -137,8 +144,8 @@ const Home = () => {
       <div data-aos="fade-up" className="pengurus">
         <Container className="pb-2">
           <h2>ORGANIZATION STRUCTURE</h2>
-          <Container className="d-md-flex justify-content-center align-items-center flex-wrap mt-5 m-3 gap-3">
-            <div data-aos="fade-up" className="card">
+          <Container className="d-md-flex justify-content-center align-items-center flex-wrap mt-5 gap-3">
+            <div data-aos="flip-up" className="card">
               <Image
                 roundedCircle="true"
                 src={process.env.PUBLIC_URL + about.pengurus[0].foto}
@@ -148,13 +155,34 @@ const Home = () => {
                 <h3>{about.pengurus[0].jabatan}</h3>
                 <h3>{about.pengurus[0].jurusan}</h3>
               </div>
+              <div className="wrapper">
+                <div className="profileCard-sosmed d-flex justify-content-center gap-3">
+                  {about.pengurus[0].hasOwnProperty("social") && (
+                    <>
+                      {about.pengurus[0].social.map((social, i) => (
+                        <a key={i} href={social.Username} target="_blank">
+                          {social.Tipe === "instagram" && (
+                            <FontAwesomeIcon icon={faInstagram} size="lg" />
+                          )}
+                          {social.Tipe === "linkedIn" && (
+                            <FontAwesomeIcon icon={faLinkedin} size="lg" />
+                          )}
+                          {social.Tipe === "github" && (
+                            <FontAwesomeIcon icon={faGithub} size="lg" />
+                          )}
+                        </a>
+                      ))}
+                    </>
+                  )}
+                </div>
+              </div>
             </div>
           </Container>
-          <Container className="d-md-flex justify-content-center align-items-center flex-wrap m-3 gap-3">
+          <Container className="d-md-flex justify-content-center align-items-center flex-wrap gap-3">
             {about.pengurus
               .filter((_, index) => index != 0)
               .map((pengurus, i) => (
-                <div data-aos="fade-up" className="card">
+                <div data-aos="flip-up" className="card">
                   <Image
                     roundedCircle="true"
                     src={process.env.PUBLIC_URL + pengurus.foto}
@@ -164,6 +192,27 @@ const Home = () => {
                     <h2>{pengurus.nama}</h2>
                     <h3>{pengurus.jabatan}</h3>
                     <h3>{pengurus.jurusan}</h3>
+                  </div>
+                  <div className="wrapper">
+                    <div className="profileCard-sosmed d-flex justify-content-center gap-3">
+                      {pengurus.hasOwnProperty("social") && (
+                        <>
+                          {pengurus.social.map((social, i) => (
+                            <a key={i} href={social.Username} target="_blank">
+                              {social.Tipe === "instagram" && (
+                                <FontAwesomeIcon icon={faInstagram} size="lg" />
+                              )}
+                              {social.Tipe === "linkedIn" && (
+                                <FontAwesomeIcon icon={faLinkedin} size="lg" />
+                              )}
+                              {social.Tipe === "github" && (
+                                <FontAwesomeIcon icon={faGithub} size="lg" />
+                              )}
+                            </a>
+                          ))}
+                        </>
+                      )}
+                    </div>
                   </div>
                 </div>
               ))}

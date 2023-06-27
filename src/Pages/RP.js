@@ -150,7 +150,7 @@ function Rp() {
   return (
     <div>
       <ScrollToTop />
-      <NavigationBar color={color} />
+      <NavigationBar color={color} page={"rp"} />
       <Intro imageSrc={content.about.banner} />
       <section id="about">
         <About

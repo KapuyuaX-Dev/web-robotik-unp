@@ -19,9 +19,22 @@ function HomePage() {
       //console.log(response.data);
       setAbout(response.data);
     });
-
-    setLoading(false);
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 500);
+    return () => clearTimeout(timer);
   }, []);
+  /*
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 100);
+    return () => clearTimeout(timer);
+  }, []);
+*/
+  if (loading) {
+    return <div />;
+  }
 
   if (loading) {
     return (
